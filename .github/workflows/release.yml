@@ -33,6 +33,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: 1xdev
           always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install Dependencies
         run: pnpm i
