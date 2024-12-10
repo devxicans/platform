@@ -23,12 +23,9 @@ importers:
 
   apps/docs:
     dependencies:
-      '@acme/core':
+      '@1xdev/users':
         specifier: workspace:*
-        version: link:../../packages/acme-core
-      '@acme/utils':
-        specifier: workspace:*
-        version: link:../../packages/acme-utils
+        version: link:../../packages/1xdev-users
       next:
         specifier: ^14.1.1
         version: 14.1.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -39,12 +36,12 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@acme/eslint-config':
+      '@1xdev/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@acme/tsconfig':
+      '@1xdev/tsconfig':
         specifier: workspace:*
-        version: link:../../packages/acme-tsconfig
+        version: link:../../packages/1xdev-tsconfig
       '@next/eslint-plugin-next':
         specifier: ^14.1.1
         version: 14.1.4
@@ -61,48 +58,20 @@ importers:
         specifier: 5.5.4
         version: 5.5.4
 
-  packages/acme-core:
+  packages/1xdev-tsconfig: {}
+
+  packages/1xdev-users:
     dependencies:
       react:
         specifier: ^18.2.0
         version: 18.2.0
     devDependencies:
-      '@acme/eslint-config':
+      '@1xdev/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@acme/tsconfig':
+      '@1xdev/tsconfig':
         specifier: workspace:*
-        version: link:../acme-tsconfig
-      '@types/react':
-        specifier: ^18.2.61
-        version: 18.2.61
-      '@types/react-dom':
-        specifier: ^18.2.19
-        version: 18.2.19
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      tsup:
-        specifier: ^8.0.2
-        version: 8.0.2(postcss@8.4.31)(typescript@5.5.4)
-      typescript:
-        specifier: 5.5.4
-        version: 5.5.4
-
-  packages/acme-tsconfig: {}
-
-  packages/acme-utils:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-    devDependencies:
-      '@acme/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@acme/tsconfig':
-        specifier: workspace:*
-        version: link:../acme-tsconfig
+        version: link:../1xdev-tsconfig
       '@types/react':
         specifier: ^18.2.61
         version: 18.2.61
@@ -1217,6 +1186,7 @@ packages:
   esbuild@0.19.7:
     resolution: {integrity: sha512-6brbTZVqxhqgbpqBR5MzErImcpA0SQdoKOkcWK/U30HtQxnokIpG3TX2r0IJqbFUzqLjhU/zC1S5ndgakObVCQ==}
     engines: {node: '>=12'}
+    hasBin: true
 
   escalade@3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -1232,6 +1202,7 @@ packages:
 
   eslint-config-prettier@9.1.0:
     resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+    hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
 
@@ -1534,6 +1505,7 @@ packages:
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
@@ -1995,6 +1967,7 @@ packages:
   next@14.1.1:
     resolution: {integrity: sha512-McrGJqlGSHeaz2yTRPkEucxQKe5Zq7uPwyeHNmJaZNY4wx9E9QdxmTp310agFRoMuIYgQrCrT3petg13fSVOww==}
     engines: {node: '>=18.17.0'}
+    hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
       react: ^18.2.0
@@ -2300,6 +2273,7 @@ packages:
   rollup@4.5.1:
     resolution: {integrity: sha512-0EQribZoPKpb5z1NW/QYm3XSR//Xr8BeEXU49Lc/mQmpmVVG5jPUVrpc2iptup/0WMrY9mzas0fxH+TjYvG2CA==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -2476,6 +2450,7 @@ packages:
   sucrase@3.34.0:
     resolution: {integrity: sha512-70/LQEZ07TEcxiU2dz51FKaE6hCTWC6vr7FOk3Gr0U60C3shtAN+H+BFr9XlYe5xqf3RA8nrc+VIwzCfnxuXJw==}
     engines: {node: '>=8'}
+    hasBin: true
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -2531,6 +2506,7 @@ packages:
 
   tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
+    hasBin: true
 
   trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
@@ -2557,6 +2533,7 @@ packages:
   tsup@8.0.2:
     resolution: {integrity: sha512-NY8xtQXdH7hDUAZwcQdY/Vzlw9johQsaqf7iwZ6g1DOUlFYQ5/AtVAjTvihhEyeRlGo4dLRVHtrRaL35M1daqQ==}
     engines: {node: '>=18'}
+    hasBin: true
     peerDependencies:
       '@microsoft/api-extractor': ^7.36.0
       '@swc/core': ^1
@@ -2654,6 +2631,7 @@ packages:
   typescript@5.5.4:
     resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
+    hasBin: true
 
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
@@ -2667,6 +2645,7 @@ packages:
 
   update-browserslist-db@1.0.13:
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
+    hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
 
