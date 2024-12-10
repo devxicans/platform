@@ -1,6 +1,6 @@
 {
   "name": "@1xdev/users",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -16,11 +16,11 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
+    "@1xdev/eslint-config": "workspace:*",
     "@1xdev/tsconfig": "workspace:*",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
-    "@1xdev/eslint-config": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "5.5.4"
   },
