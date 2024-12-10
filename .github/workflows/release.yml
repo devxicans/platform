@@ -26,10 +26,14 @@ jobs:
         with:
           version: 9
 
-      - name: Setup Node.js 20.x
+      - name: Get node version
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        id: nvm
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           registry-url: 'https://registry.npmjs.org'
           scope: 1xdev
           always-auth: true
