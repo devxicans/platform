@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/devxicans/platform/compare/@1xdev/users@0.3.1...@1xdev/users@0.4.0) (2024-12-10)
+
+### Features
+
+- new user ([b872c5c](https://github.com/devxicans/platform/commit/b872c5cea7fa7988c262a882e268d612d5c9f1f2))
+
 ## [0.3.1](https://github.com/devxicans/platform/compare/@1xdev/users@0.3.0...@1xdev/users@0.3.1) (2024-12-10)
 
 ### Bug Fixes
