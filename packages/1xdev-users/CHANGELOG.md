@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/devxicans/platform/compare/@1xdev/users@0.3.0...@1xdev/users@0.3.1) (2024-12-10)
+
+### Bug Fixes
+
+- license warning ([ee452a6](https://github.com/devxicans/platform/commit/ee452a6b82f407464f08f968888bab5edd4ff33f))
+
 # 0.3.0 (2024-12-10)
 
 ### Features
