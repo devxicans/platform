@@ -45,5 +45,5 @@ jobs:
           version: 8
     - name: Install Dependencies
       run: pnpm i
-    - name: Test
+    - name: Lint
       run: pnpm lint
