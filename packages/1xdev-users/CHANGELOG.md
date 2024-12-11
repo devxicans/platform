@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/devxicans/platform/compare/@1xdev/users@0.5.0...@1xdev/users@0.6.0) (2024-12-11)
+
+### Features
+
+- adding lint tests ([#6](https://github.com/devxicans/platform/issues/6)) ([01b9b38](https://github.com/devxicans/platform/commit/01b9b38d69d2c3f96e6a85f84ac08f62cca2e965))
+
 # [0.5.0](https://github.com/devxicans/platform/compare/@1xdev/users@0.4.2...@1xdev/users@0.5.0) (2024-12-11)
 
 ### Features
