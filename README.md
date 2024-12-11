@@ -21,19 +21,24 @@ The packages exported here will be used from all the products we create to share
 
 ## Running app
 
-1. Get correct node version
+### Prerequisits
+1. Install NVM
+  https://github.com/nvm-sh/nvm
+2. Install PNPM
+  https://pnpm.io/installation
+3. Install Turbo
+  https://turbo.build/repo/docs/getting-started/installation#installing-turbo
+
+### Start dev locally
+1. Use correct node version
    ```
    nvm use
    ```
-   For nvm installation: https://github.com/nvm-sh/nvm
-
-2. Install PNPM
-https://pnpm.io/installation
-
-3. Install Turbo
-https://turbo.build/repo/docs/getting-started/installation#installing-turbo
-
-4. Run dev
+2. Install dependencies
+```
+pnpm i
+```
+3. Run dev
 ```
 pnpm dev
 ```
