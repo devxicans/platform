@@ -1,11 +1,11 @@
 {
-  "name": "@1xdev/docs",
+  "name": "@1xdev/homepage",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "next build",
     "start": "next start ",
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3000",
     "lint": "next lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
