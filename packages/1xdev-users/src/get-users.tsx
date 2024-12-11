@@ -1,3 +1,3 @@
 export const getUsers = () => {
-  return ['felipe', 'luis', 'nava'];
+  return ['felipe', 'luis', 'nava', 'Adrian'];
 };
