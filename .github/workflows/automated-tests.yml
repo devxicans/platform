@@ -28,6 +28,7 @@ jobs:
       uses: cypress-io/github-action@v6.7.8
       with:
           browser: chrome
+          project: ./apps/lab
           build: pnpm build
           start: pnpm start --filter=@1xdev/lab
           wait-on: "http://localhost:3000"
