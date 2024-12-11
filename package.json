@@ -8,8 +8,9 @@
     "clean": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish:packages": "lerna publish",
+    "start": "turbo start",
     "test": "turbo test",
-    "test:cypress": "turbo test:cypress"
+    "test:cypress:dev": "turbo test:cypress:dev"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
