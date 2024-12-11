@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/devxicans/platform/compare/@1xdev/users@0.7.0...@1xdev/users@0.8.0) (2024-12-11)
+
+### Features
+
+- Added name to get-user.tsx and modified its test ([#11](https://github.com/devxicans/platform/issues/11)) ([c2e7bb0](https://github.com/devxicans/platform/commit/c2e7bb023ca5877d8bdfd58d2497f2137d0e99d9))
+
 # [0.7.0](https://github.com/devxicans/platform/compare/@1xdev/users@0.6.0...@1xdev/users@0.7.0) (2024-12-11)
 
 ### Features
