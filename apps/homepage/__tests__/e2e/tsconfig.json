@@ -1,0 +1,11 @@
+
+{
+  "extends": "@1xdev/tsconfig/cypress.json",
+  "exclude": [],
+  "include": [
+    "*.cy.tsx",
+    "*.cy.ts",
+    "**/*.cy.tsx",
+    "**/*.cy.ts"
+  ]
+}
