@@ -7,18 +7,20 @@
     "start": "next start ",
     "dev": "next dev -p 3000",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "test:cypress:dev": "next build && next start & wait-on http://localhost:3000 && cypress open"
   },
   "dependencies": {
+    "@1xdev/users": "workspace:*",
     "@uireact/foundation": "^3.1.4",
     "@uireact/text": "^3.5.3",
     "@uireact/view": "^3.5.3",
-    "@1xdev/users": "workspace:*",
     "next": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@1xdev/eslint-config": "workspace:*",
     "@1xdev/tsconfig": "workspace:*",
     "@next/eslint-plugin-next": "^14.1.1",
     "@types/node": "^20.11.24",
@@ -27,7 +29,7 @@
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "@typescript-eslint/typescript-estree": "^8.18.0",
-    "@1xdev/eslint-config": "workspace:*",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "wait-on": "^8.0.1"
   }
 }
