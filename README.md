@@ -19,6 +19,19 @@ The packages exported here will be used from all the products we create to share
 - `pnpm test` - Run unit test in all packages
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
 
+## Running app
+
+1. Install PNPM
+https://pnpm.io/installation
+
+2. Install Turbo
+https://turbo.build/repo/docs/getting-started/installation#installing-turbo
+
+3. Run dev
+```
+pnpm dev
+```
+
 ## Versioning and Publishing packages
 
 When a PR is merged the action: [Publish](https://github.com/devxicans/platform/actions/workflows/release.yml) is executed and it will automatically bump the version of any modified package and will publish any package with new versions. This already takes care of peer dependencies.
