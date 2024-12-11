@@ -25,6 +25,8 @@ The packages exported here will be used from all the products we create to share
    ```
    nvm use
    ```
+   For nvm installation: https://github.com/nvm-sh/nvm
+
 2. Install PNPM
 https://pnpm.io/installation
 
