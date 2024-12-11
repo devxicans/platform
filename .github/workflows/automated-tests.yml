@@ -32,7 +32,7 @@ jobs:
           build: pnpm build
           start: pnpm start --filter=@1xdev/lab
           wait-on: "http://localhost:3000"
-  homnepage:
+  homepage:
     name: Homepage app tests
     runs-on: ubuntu-latest
     steps:
@@ -50,6 +50,13 @@ jobs:
       with:
           version: 8
     - name: Install Dependencies
-      run: pnpm i
-    - name: Run cypress
-      run: pnpm test:cypress --filter=@1xdev/homepage
+      run: pnpm i                  
+    - name: Cypress.io
+      uses: cypress-io/github-action@v6.7.8
+      with:
+          browser: chrome
+          project: ./apps/homepage
+          build: pnpm build
+          start: pnpm start --filter=@1xdev/homepage
+          wait-on: "http://localhost:3000"
+          
