@@ -1,5 +1,5 @@
 {
-  "name": "@1xdev/docs",
+  "name": "@1xdev/lab",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@1xdev/users": "workspace:*",
+    "@uireact/foundation": "^3.1.4",
+    "@uireact/text": "^3.5.3",
+    "@uireact/view": "^3.5.3",
     "next": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
