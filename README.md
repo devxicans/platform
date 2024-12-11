@@ -17,6 +17,8 @@ The packages exported here will be used from all the products we create to share
  - localhost:3001 -> lab   
 - `pnpm lint` - Lint all packages
 - `pnpm test` - Run unit test in all packages
+- `pnpm test:cypress:dev --filter=@1xdev/APPLICATION` - Run cypress tests in a specific application.
+  - This will start up the application and run cypress on it.
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
 
 ## Running app
