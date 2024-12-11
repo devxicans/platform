@@ -6,7 +6,7 @@ on:
 
 jobs:
   lab:
-    name: Lab tests
+    name: Lab app tests
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repo
@@ -26,8 +26,8 @@ jobs:
       run: pnpm i
     - name: Run cypress
       run: pnpm test:cypress --filter=@1xdev/lab
-  lint:
-    name: Linting
+  homnepage:
+    name: Homepage app tests
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repo
