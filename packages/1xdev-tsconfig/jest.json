@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "ES2015"],
+    "module": "NodeNext",
+    "target": "es6",
+    "types": [
+      "@testing-library/jest-dom",
+      "@testing-library/react"
+    ]
+  }
+}
