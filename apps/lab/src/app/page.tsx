@@ -1,7 +1,13 @@
+import { ViewWrapper } from './components';
+
+import styles from './home.module.css';
+
 export default function Page() {
   return (
-    <>
-      <h1>1x developers</h1>
-    </>
+    <ViewWrapper>
+      <div className={styles.main}>
+        <h1 className={styles.hero}>Tech lab</h1>
+      </div>
+    </ViewWrapper>
   );
 }
