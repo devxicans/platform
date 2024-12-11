@@ -16,6 +16,7 @@ The packages exported here will be used from all the products we create to share
  - localhost:3000 -> home page
  - localhost:3001 -> lab   
 - `pnpm lint` - Lint all packages
+- `pnpm test` - Run unit test in all packages
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
 
 ## Versioning and Publishing packages
