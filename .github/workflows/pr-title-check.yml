@@ -1,0 +1,23 @@
+name: PR Title
+
+on:
+  pull_request:
+    branches: [ main ]
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - labeled
+      - unlabeled
+
+jobs:
+  title:
+    name: Checker
+    runs-on: ubuntu-latest
+    steps:
+    - name: PR Title Checker              
+      uses: thehanimo/pr-title-checker@v1.4.3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  
