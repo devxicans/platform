@@ -11,7 +11,7 @@
       "dependsOn": []
     },
     "test:cypress": {
-      "dependsOn": ["^build"]
+      "cache": false
     },
     "lint": {},
     "dev": {

@@ -8,7 +8,7 @@
     "dev": "next dev -p 3000",
     "lint": "next lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
-    "test:cypress": "next build && next start & wait-on http://localhost:3000 && cypress run"
+    "test:cypress": "next start & wait-on http://localhost:3000 && cypress run"
   },
   "dependencies": {
     "@1xdev/users": "workspace:*",
