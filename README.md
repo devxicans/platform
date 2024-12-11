@@ -21,13 +21,17 @@ The packages exported here will be used from all the products we create to share
 
 ## Running app
 
-1. Install PNPM
+1. Get correct node version
+   ```
+   nvm use
+   ```
+2. Install PNPM
 https://pnpm.io/installation
 
-2. Install Turbo
+3. Install Turbo
 https://turbo.build/repo/docs/getting-started/installation#installing-turbo
 
-3. Run dev
+4. Run dev
 ```
 pnpm dev
 ```
