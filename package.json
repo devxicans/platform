@@ -10,16 +10,20 @@
     "publish:packages": "lerna publish",
     "start": "turbo start",
     "test": "turbo test",
-    "test:cypress:dev": "turbo test:cypress:dev"
+    "test:cypress:dev": "turbo test:cypress:dev",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@testing-library/cypress": "^10.0.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
     "cypress": "^13.16.1",
     "eslint": "^8.57.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lerna": "^8.1.9",
