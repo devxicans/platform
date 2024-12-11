@@ -5,8 +5,8 @@ import './global.css';
 const sen = Sen({ style: 'normal', subsets: ['latin'], variable: '--font-family' });
 
 export const metadata: Metadata = {
-  title: "1x developers | Tech",
-  description: "1x developers company, tech that solves problems.",
+  title: "Lab 1x Dev",
+  description: "This is the lab app for testing exported packages",
 };
 
 export default function RootLayout({
