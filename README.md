@@ -31,9 +31,9 @@ The packages exported here will be used from all the products we create to share
 
 ### Start dev locally
 1. Use correct node version
-   ```
-   nvm use
-   ```
+```
+nvm use
+```
 2. Install dependencies
 ```
 pnpm i
