@@ -1,13 +1,15 @@
 name: PR Title
 
 on:
-  pull_request_target:
+  pull_request:
+    branches: [ main ]
     types:
       - opened
       - edited
       - synchronize
       - labeled
       - unlabeled
+
 jobs:
   title:
     name: Checker
