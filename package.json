@@ -1,4 +1,5 @@
 {
+  "name": "1xdevelopers",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -20,8 +21,9 @@
   "engines": {
     "node": ">=22"
   },
-  "name": "1xdevelopers",
   "dependencies": {
-    
+    "next": "^14.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
