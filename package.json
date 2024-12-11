@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish:packages": "lerna publish",
     "test": "turbo test",
-    "test:cypress": "turbo build && turbo test:cypress"
+    "test:cypress": "turbo test:cypress"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
