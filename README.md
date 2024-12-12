@@ -13,8 +13,8 @@ The packages exported here will be used from all the products we create to share
 
 - `pnpm build` - Build all packages and apps
 - `pnpm dev` - Start all apps in dev mode.
- - localhost:3000 -> home page
- - localhost:3001 -> lab   
+ - [localhost:3000](http://localhost:3000/) -> home page
+ - [localhost:3001](http://localhost:3001/) -> lab   
 - `pnpm lint` - Lint all packages
 - `pnpm test` - Run unit test in all packages
 - `pnpm test:cypress:dev --filter=@1xdev/APPLICATION` - Run cypress tests in a specific application.
