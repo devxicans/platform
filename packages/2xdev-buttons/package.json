@@ -1,0 +1,29 @@
+{
+  "name": "2xdev-buttons",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "AdrifeCova <adrife2000@hotmail.com>",
+  "homepage": "https://github.com/devxicans/platform#readme",
+  "license": "ISC",
+  "main": "lib/2xdev-buttons.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devxicans/platform.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/2xdev-buttons.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/devxicans/platform/issues"
+  }
+}
