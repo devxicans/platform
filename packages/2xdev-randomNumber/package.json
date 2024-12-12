@@ -1,5 +1,5 @@
 {
-  "name": "@1xdev/getrandomnumber",
+  "name": "@1xdev/get-random-number",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,3 +1,3 @@
-# users
+# random-number
 
-Users package
+Random-number package
