@@ -8,6 +8,6 @@ describe('First test', () => {
   it("Should check if the button exists", () => {
     cy.visit('/');
 
-    cy.findByText('Click Here').should('be.visible');
+    cy.contains('Click Here').click();
   })
 });
