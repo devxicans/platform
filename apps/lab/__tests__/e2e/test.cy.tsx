@@ -6,8 +6,12 @@ describe('First test', () => {
   });
 
   it("Should check if the button exists", () => {
-    cy.visit('/');
+    cy.visit('/')
 
-    cy.contains('Click Here').click();
+    const button = cy.findByRole('button', { name: 'Click Here' });
+
+    button.should('be.visible');
+
+    button.click();
   })
 });
