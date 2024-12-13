@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../src';
+import {getRandomNumber} from '../src'
 
 describe('getRandomNumber', () => {
   it('Should return a random number', () => {
