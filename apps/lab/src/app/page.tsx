@@ -9,7 +9,7 @@ export default function Page() {
     <ViewWrapper>
       <div className={styles.main}>
         <h1 className={styles.hero}>Tech lab</h1>
-        <Button type='button' className={styles.btn}>Hello</Button>
+        <Button type='button' className={styles.btn}>Click Here</Button>
       </div>
     </ViewWrapper>
   );
