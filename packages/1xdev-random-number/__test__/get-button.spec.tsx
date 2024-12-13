@@ -1,6 +1,6 @@
 import { Button } from '../src'
 import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 
 describe('Button component', () => {
   test('renders with children', () => {
@@ -11,7 +11,7 @@ describe('Button component', () => {
   test('applies className', () => {
     const className = 'btn_default';
     render(<Button className={className}>Submit</Button>);
-    expect(screen.getByText('submit')).toHaveClass(className);
+    expect(screen.getByText('Submit')).toHaveClass(className);
   });
 
   test('sets button type', () => {
