@@ -8,10 +8,6 @@ describe('First test', () => {
   it("Should check if the button exists", () => {
     cy.visit('/')
 
-    const button = cy.findByRole('button', { name: 'Click Here' });
-
-    button.should('be.visible');
-
-    button.click();
+    cy.findByRole('button', { name: 'Click Here' }).should('be.visible').click();
   })
 });
