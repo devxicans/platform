@@ -10,4 +10,16 @@ describe('First test', () => {
 
     cy.findByRole('button', { name: 'Click Here' }).should('be.visible').click();
   })
+
+  it("Should check if label for input exists", () => {
+    cy.visit('/')
+
+    cy.findByText('My input').should('exist').and('be.visible');
+  })
+
+  it("Should check if input exists", () => {
+    cy.visit('/')
+
+    cy.get('input[id=my-input]').type('Hola').should('have.value', 'Hola');
+  })
 });
