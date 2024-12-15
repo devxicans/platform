@@ -9,6 +9,7 @@
     "lint": "next lint",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
     "test:cypress": "cypress run",
+    "test:cypress:open": "cypress open",
     "test:cypress:dev": "next build && next start & wait-on http://localhost:3000 && cypress open"
   },
   "dependencies": {
