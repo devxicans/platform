@@ -1,5 +1,7 @@
 'use client'
 
+import styles from './button.module.scss';
+
 interface ButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -7,9 +9,9 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button = ({ children, className, type, onClick} : ButtonProps) => {
+export const Button = ({ children, className = '', type, onClick} : ButtonProps) => {
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button type={type} className={`${className} ${styles.btn}`} onClick={onClick}>
       {children}
     </button>
   )
