@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/devxicans/platform/compare/@1xdev/get-random-number@0.2.0...@1xdev/get-random-number@0.2.1) (2024-12-15)
+
+**Note:** Version bump only for package @1xdev/get-random-number
+
 # [0.2.0](https://github.com/devxicans/platform/compare/@1xdev/get-random-number@0.1.0...@1xdev/get-random-number@0.2.0) (2024-12-15)
 
 ### Features
