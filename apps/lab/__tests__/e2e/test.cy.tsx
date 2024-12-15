@@ -14,7 +14,7 @@ describe('First test', () => {
   it("Should check if label for input exists", () => {
     cy.visit('/')
 
-    cy.findByText('My input').should('exist').and('be.visible');
+    cy.findByRole('textbox', { name: 'My input' }).should('exist').and('be.visible');
   })
 
   it("Should check if input exists", () => {
