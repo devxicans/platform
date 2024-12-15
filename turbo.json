@@ -13,6 +13,9 @@
     "test:cypress": {
       "cache": false
     },
+    "test:cypress:open": {
+      "cache": false
+    },
     "test:cypress:dev": {
       "dependsOn": ["^build"],
       "cache": false
