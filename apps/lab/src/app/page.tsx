@@ -10,7 +10,7 @@ export default function Page() {
     <ViewWrapper>
       <div className={styles.main}>
         <h1 className={styles.hero}>Tech lab</h1>
-        <CustomInput label='My input' type='text' id='my-input' placeholder='Write here'/>
+        <CustomInput label='My input' type='text' id='my-input' placeholder='Write here' name='My input'/>
         <Button type='button' className={styles.btn}>Click Here</Button>
       </div>
     </ViewWrapper>

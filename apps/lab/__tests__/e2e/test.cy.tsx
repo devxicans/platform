@@ -17,9 +17,9 @@ describe('First test', () => {
     cy.findByRole('textbox', { name: 'My input' }).should('exist').and('be.visible');
   })
 
-  it("Should check if input exists", () => {
+  it("Should check if input is writable", () => {
     cy.visit('/')
 
-    cy.get('input[id=my-input]').type('Hola').should('have.value', 'Hola');
+    cy.findByRole('textbox', { name: 'My input' }).type('Hola').should('have.value', 'Hola');
   })
 });
