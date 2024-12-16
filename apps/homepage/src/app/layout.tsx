@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import { Sen } from "next/font/google";
+import { Fira_Code } from 'next/font/google';
 import './global.css';
 
-const sen = Sen({ style: 'normal', subsets: ['latin'], variable: '--font-family' });
+const firaCode = Fira_Code({style: 'normal', subsets: ['latin'], variable: '--font-family'})
 
 export const metadata: Metadata = {
   title: "1x developers | Tech",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sen.variable}`}>{children}</body>
+      <body className={`${firaCode.className}`}>{children}</body>
     </html>
   );
 }
