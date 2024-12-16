@@ -1,9 +1,9 @@
-import { CostumeProject } from './costume-project'
+import { CustomProject } from './custom-project'
 import './projects.module.scss'
 
 export default function ProjectsPage() {
   return <>
-  <CostumeProject/>
+  <CustomProject/>
   <h1>ProjectPage</h1>
   </>
 }
