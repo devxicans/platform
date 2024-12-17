@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@1xdev/users": "workspace:*",
-    "@1xdev/luis": "workspace:*",
     "@uireact/foundation": "^3.1.4",
     "@uireact/text": "^3.5.3",
     "@uireact/view": "^3.5.3",
