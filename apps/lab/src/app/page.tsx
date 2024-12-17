@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <ViewWrapper>
       <div className={styles.main}>
-        <h1 className={styles.hero}>Tech Lab</h1>
+        <h1 className={styles.hero}>Tech lab</h1>
       </div>
     </ViewWrapper>
   );
