@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
+import { ViewWrapper } from '../lib';
 import './global.css';
-import { ViewWrapper } from './components';
 
 const firaCode = Fira_Code({ style: 'normal', subsets: ['latin'], variable: '--font-family' })
 
