@@ -1,15 +1,9 @@
-/**********
- *
- * @UiReact generated theme variables
- *  Make sure these are part of your app bundle
- *
- **********/
+@import url('../../node_modules/@uireact/view/dist/index.css');
 
-/**
- * Defaulting to dark coloration on SSR
- * **/
-
- :root {
+  /**
+   * Dark coloration class
+   * **/
+ :root, .dark {
     
   --error-token_10: #fd3e55;
   --error-token_50: #fa0220;
@@ -119,93 +113,6 @@
   --spacing-five: 2rem;
   --spacing-six: 2.5rem;
   --spacing-seven: 3rem;
-  }
-
-  /**
-   * Dark coloration class
-   * **/
-  .dark {
-      
-  --error-token_10: #fd3e55;
-  --error-token_50: #fa0220;
-  --error-token_100: #d0021b;
-  --error-token_150: #8b0112;
-  --error-token_200: #74010f;
-  --warning-token_10: #fcf5a2;
-  --warning-token_50: #faed52;
-  --warning-token_100: #f8e71c;
-  --warning-token_150: #b2a506;
-  --warning-token_200: #958a05;
-  --negative-token_10: #ffadad;
-  --negative-token_50: #ff5757;
-  --negative-token_100: #ff1e1e;
-  --negative-token_150: #be0000;
-  --negative-token_200: #9e0000;
-  --positive-token_10: #77ee68;
-  --positive-token_50: #40e72a;
-  --positive-token_100: #2ccd17;
-  --positive-token_150: #1d890f;
-  --positive-token_200: #18720d;
-  --fonts-token_10: #ffffff;
-  --fonts-token_50: #ffffff;
-  --fonts-token_100: #ffffff;
-  --fonts-token_150: #c4c4c4;
-  --fonts-token_200: #b6b6b6;
-  --primary-token_10: #000000;
-  --primary-token_50: #000000;
-  --primary-token_100: #000000;
-  --primary-token_150: #000000;
-  --primary-token_200: #000000;
-  --secondary-token_10: #ffffff;
-  --secondary-token_50: #ffffff;
-  --secondary-token_100: #ffffff;
-  --secondary-token_150: #c4c4c4;
-  --secondary-token_200: #b6b6b6;
-  --tertiary-token_10: #fdb8fe;
-  --tertiary-token_50: #fa62fd;
-  --tertiary-token_100: #f828fc;
-  --tertiary-token_150: #bc03c0;
-  --tertiary-token_200: #9d02a0;
-  --inverse-error-token_10: #fd3e55;
-  --inverse-error-token_50: #fa0220;
-  --inverse-error-token_100: #d0021b;
-  --inverse-error-token_150: #8b0112;
-  --inverse-error-token_200: #74010f;
-  --inverse-warning-token_10: #fcf5a2;
-  --inverse-warning-token_50: #faed52;
-  --inverse-warning-token_100: #f8e71c;
-  --inverse-warning-token_150: #b2a506;
-  --inverse-warning-token_200: #958a05;
-  --inverse-negative-token_10: #ffadad;
-  --inverse-negative-token_50: #ff5757;
-  --inverse-negative-token_100: #ff1e1e;
-  --inverse-negative-token_150: #be0000;
-  --inverse-negative-token_200: #9e0000;
-  --inverse-positive-token_10: #77ee68;
-  --inverse-positive-token_50: #40e72a;
-  --inverse-positive-token_100: #2ccd17;
-  --inverse-positive-token_150: #1d890f;
-  --inverse-positive-token_200: #18720d;
-  --inverse-fonts-token_10: #000000;
-  --inverse-fonts-token_50: #000000;
-  --inverse-fonts-token_100: #000000;
-  --inverse-fonts-token_150: #000000;
-  --inverse-fonts-token_200: #000000;
-  --inverse-primary-token_10: #ffffff;
-  --inverse-primary-token_50: #ffffff;
-  --inverse-primary-token_100: #ffffff;
-  --inverse-primary-token_150: #c4c4c4;
-  --inverse-primary-token_200: #b6b6b6;
-  --inverse-secondary-token_10: #000000;
-  --inverse-secondary-token_50: #000000;
-  --inverse-secondary-token_100: #000000;
-  --inverse-secondary-token_150: #000000;
-  --inverse-secondary-token_200: #000000;
-  --inverse-tertiary-token_10: #fdb8fe;
-  --inverse-tertiary-token_50: #fa62fd;
-  --inverse-tertiary-token_100: #f828fc;
-  --inverse-tertiary-token_150: #bc03c0;
-  --inverse-tertiary-token_200: #9d02a0;
   }
 
   /**

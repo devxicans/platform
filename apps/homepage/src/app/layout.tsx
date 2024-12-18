@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${firaCode.className}`}>
+      <body className={`${firaCode.variable}`}>
         <ViewWrapper>
           <Header />
           {children}
