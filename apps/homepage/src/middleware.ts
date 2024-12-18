@@ -1,21 +1,9 @@
 import { NextResponse, NextRequest } from "next/server";
-import { match } from '@formatjs/intl-localematcher'
-import Negotiator from 'negotiator'
-
-let locales: string[] = ['en-US', 'es-MX']
-
-function getLocale(request: NextRequest) {
-  let headers = { 'accept-language': 'en-US,en;q=0.5' }
-  let languages = new Negotiator({ headers }).languages()
-  let locales: string[] = ['en-US', 'es-MX']
-  let defaultLocale: string = 'en-US'
-
-  match(languages, locales, defaultLocale)
-}
+import { getLocale, supportedLanguages } from "./lib";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
-  const pathnameHasLocale: boolean = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
+  const pathnameHasLocale: boolean = supportedLanguages.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
 
   if (pathnameHasLocale) return
 
