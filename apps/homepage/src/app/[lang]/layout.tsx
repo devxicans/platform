@@ -1,4 +1,6 @@
 import { SupportedLanguages } from '../../types'
+import { LocProvider } from '../../lib/context/loc-context'
+import { getDictionary } from '../../lib'
 
 interface AppLayoutProps {
   children: React.ReactNode
@@ -7,10 +9,12 @@ interface AppLayoutProps {
   }
 }
 
-export default function AppLayout({ children, params }: AppLayoutProps) {
+export default async function AppLayout({ children, params }: AppLayoutProps) {
+  const loc = await getDictionary(params.lang);
+
   return (
-    <div>
+    <LocProvider loc={loc}>
       {children}
-    </div>
+    </LocProvider>
   )
 }
