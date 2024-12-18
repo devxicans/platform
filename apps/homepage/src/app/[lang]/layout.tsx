@@ -1,9 +1,9 @@
-import { LanguagesType } from '../../types'
+import { SupportedLanguages } from '../../types'
 
 interface AppLayoutProps {
   children: React.ReactNode
-  params?: {
-    lang: LanguagesType
+  params: {
+    lang: SupportedLanguages
   }
 }
 

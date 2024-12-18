@@ -1,1 +1,1 @@
-export type LanguagesType = 'en' | 'es'
+export type SupportedLanguages = 'en' | 'es'

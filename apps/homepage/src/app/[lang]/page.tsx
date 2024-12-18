@@ -1,10 +1,10 @@
 import styles from './home.module.css'
-import { LanguagesType } from '../../types'
+import { SupportedLanguages } from '../../types'
 import { getDictionary } from '../../lib'
 
 interface AppPageProps {
   params: {
-    lang: LanguagesType
+    lang: SupportedLanguages
   }
 }
 
