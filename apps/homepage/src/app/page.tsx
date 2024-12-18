@@ -1,13 +1,12 @@
-import { ViewWrapper } from './components';
+import { Hero, Project } from './components'
 
 import styles from './home.module.css';
 
-export default function Page() {
+export default function HomePage() {
   return (
-    <ViewWrapper>
       <div className={styles.main}>
-        <h1 className={styles.hero}>1x developers</h1>
+        <Hero />
+        <Project />
       </div>
-    </ViewWrapper>
   );
 }
