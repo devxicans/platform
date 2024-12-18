@@ -133,6 +133,9 @@ importers:
 
   apps/lab:
     dependencies:
+      '@1xdev/pablo':
+        specifier: 0.1.1
+        version: 0.1.1
       '@1xdev/users':
         specifier: workspace:*
         version: link:../../packages/1xdev-users
@@ -281,6 +284,9 @@ importers:
         version: 5.5.4
 
 packages:
+
+  '@1xdev/pablo@0.1.1':
+    resolution: {integrity: sha512-/z3tKF0xfx81yfD6laBsea5NZs9Q9ROzBmjr/cn7UYNvmhAHJMopDBzDZjE7DOVVpbfSyqq6ohsDir/X8332tg==, tarball: https://registry.npmjs.org/@1xdev/pablo/-/pablo-0.1.1.tgz}
 
   '@aashutoshrathi/word-wrap@1.2.6':
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==, tarball: https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz}
@@ -6195,6 +6201,10 @@ packages:
     engines: {node: '>=12.20'}
 
 snapshots:
+
+  '@1xdev/pablo@0.1.1':
+    dependencies:
+      react: 18.2.0
 
   '@aashutoshrathi/word-wrap@1.2.6': {}
 
