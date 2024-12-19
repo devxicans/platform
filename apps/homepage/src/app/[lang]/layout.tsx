@@ -15,7 +15,7 @@ export default async function AppLayout({ children, params }: AppLayoutProps) {
 
   return (
     <LocProvider loc={loc}>
-      <Header />
+      <Header loc={loc} />
       {children}
     </LocProvider>
   )

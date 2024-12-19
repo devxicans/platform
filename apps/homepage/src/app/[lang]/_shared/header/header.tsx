@@ -1,5 +1,11 @@
 import './header.module.scss'
 
-export function Header() {
-  return <h1>Header</h1>
+type HeaderProps = {
+  loc: {
+    [x in string]: string
+  }
+}
+
+export function Header({ loc }: HeaderProps) {
+  return <h1>{loc.header}</h1>
 } 

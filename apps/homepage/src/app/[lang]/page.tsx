@@ -1,9 +1,8 @@
 'use client'
 import styles from './home.module.css'
-import { SupportedLanguages } from '../../types'
 import { useLocalization } from '../../lib/context/loc-context'
 
-export default async function AppPage() {
+export default function AppPage() {
   const loc = useLocalization();
 
   return (
