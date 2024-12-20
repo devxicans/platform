@@ -36,29 +36,3 @@ describe('Localization Route Tests', () => {
     });
   });
 })
-
-// describe('Dynamic Content Localization Tests', () => {
-//   const locales = ['en', 'es'];
-
-//   locales.forEach((locale) => {
-//     it(`should display dynamic content correctly in ${locale}`, () => {
-//       cy.visit(`/${locale}`);
-
-//       if (locale === 'en') {
-//         cy.findByText('Header').contains('Submit').should('be.visible');
-//       } else if (locale === 'es') {
-//         cy.get('button').contains('Enviar').should('be.visible');
-//       } else if (locale === 'fr') {
-//         cy.get('button').contains('Soumettre').should('be.visible');
-//       }
-
-//       if (locale === 'en') {
-//         cy.get('h1').contains('Welcome to our site').should('be.visible');
-//       } else if (locale === 'es') {
-//         cy.get('h1').contains('Bienvenido a nuestro sitio').should('be.visible');
-//       } else if (locale === 'fr') {
-//         cy.get('h1').contains('Bienvenue sur notre site').should('be.visible');
-//       }
-//     });
-//   });
-// });
