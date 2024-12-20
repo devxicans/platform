@@ -7,5 +7,5 @@ type HeaderProps = {
 }
 
 export function Header({ loc }: HeaderProps) {
-  return <h1>{loc.header}</h1>
+  return <h1 data-testid="header">{loc.header}</h1>
 } 

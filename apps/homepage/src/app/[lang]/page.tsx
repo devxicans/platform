@@ -7,7 +7,7 @@ export default function AppPage() {
 
   return (
     <div className={styles.main}>
-      <h1 className={styles.hero}>{loc.title}</h1>
+      <h1 data-testid="title" className={styles.hero}>{loc.title}</h1>
     </div>
   )
 }
