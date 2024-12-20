@@ -7,9 +7,9 @@ export const supportedLanguages: SupportedLanguages[] = ['en', 'es']
 export const defaultLocale: string = 'en'
 
 export function getLocale(request: NextRequest) {
-  const acceptedLanguage = request.headers.get('accept-language') ?? undefined
-  const headers = { 'accept-language': acceptedLanguage }
-  let languages = new Negotiator({ headers }).languages()
+  const acceptedLanguage = request.headers.get('accept-language') ?? defaultLocale;
+  const headers = { 'accept-language': acceptedLanguage };
+  let languages = new Negotiator({ headers }).languages();
 
   return match(languages, supportedLanguages, defaultLocale) as SupportedLanguages
 }
