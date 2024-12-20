@@ -11,6 +11,7 @@
     "start": "turbo start",
     "test": "turbo test",
     "test:cypress:dev": "turbo test:cypress:dev",
+    "test:cypress:open": "turbo test:cypress:open",
     "prepare": "husky"
   },
   "devDependencies": {
