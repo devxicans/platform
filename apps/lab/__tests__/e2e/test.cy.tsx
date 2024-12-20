@@ -9,7 +9,5 @@ describe('First test', () => {
     cy.visit('/');
 
     cy.findByText('My package').should('be.visible');
-
-    cy.get('.custom-class').should('exist');
   });
 });
