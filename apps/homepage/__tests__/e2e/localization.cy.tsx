@@ -2,31 +2,49 @@ describe('Localization Tests', () => {
   const languages = {
     en: {
       title: 'HomePage',
-      header: 'Header'
+      header: 'Header',
+      langHeader: 'en'
     },
     es: {
       title: 'Pagina Principal',
-      header: 'Encabezado'
+      header: 'Encabezado',
+      langHeader: 'es'
     }
   };
 
-  Object.keys(languages).forEach(lang => {
+  const defaultLanguage = languages.en;
+
+  Object.entries(languages).forEach(([lang, translations]) => {
     context(`Language: ${lang}`, () => {
       beforeEach(() => {
         cy.visit('/', {
           headers: {
-            'Accept-Language': lang
+            'Accept-Language': translations.langHeader
           }
         });
       });
 
       it(`should display the title message in ${lang}`, () => {
-        cy.get('[data-testid=title]').should('contain', languages[lang].title);
+        cy.findByText(translations.title).should('exist');
       });
 
       it(`should display the header message in ${lang}`, () => {
-        cy.get('[data-testid=header]').should('contain', languages[lang].header);
+        cy.findByText(translations.header).should('exist');
       });
+    });
+  });
+
+  context('Default Language', () => {
+    beforeEach(() => {
+      cy.visit('/');
+    });
+
+    it(`should display the title message in default language`, () => {
+      cy.findByText(defaultLanguage.title).should('exist');
+    });
+
+    it(`should display the header message in default language`, () => {
+      cy.findByText(defaultLanguage.header).should('exist');
     });
   });
 });
