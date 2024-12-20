@@ -17,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sen.variable}`}>
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,3 @@
-import './card-custom.css';
-
 interface CardProps  { 
     children: React.ReactNode;
     className?: string;
@@ -7,8 +5,8 @@ interface CardProps  {
   
   export const CardCustom = ({children, className}: CardProps) => { 
     return (
-    <div className = {`card-custom ${className || ''}`}> 
-      {children}
-    </div>
+      <div className={className}>
+        {children}
+      </div>
    )
   }
