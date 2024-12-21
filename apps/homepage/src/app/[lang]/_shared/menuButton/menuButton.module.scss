@@ -1,0 +1,9 @@
+.button{
+  color: var(--fonts-token_10);
+  font-weight: bold;
+  padding: 0 15px 0 15px;
+}
+
+.button:hover{
+  color: var(--tertiary-token_100);
+}
