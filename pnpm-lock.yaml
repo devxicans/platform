@@ -261,6 +261,34 @@ importers:
         specifier: 5.5.4
         version: 5.5.4
 
+  packages/1xdev-ui:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@1xdev/eslint-config':
+        specifier: workspace:*
+        version: link:../../internal/eslint-config
+      '@1xdev/tsconfig':
+        specifier: workspace:*
+        version: link:../../internal/1xdev-tsconfig
+      '@types/react':
+        specifier: ^18.2.61
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.19
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      tsup:
+        specifier: ^8.0.2
+        version: 8.0.2(postcss@8.4.31)(ts-node@10.9.2(@types/node@20.11.24)(typescript@5.5.4))(typescript@5.5.4)
+      typescript:
+        specifier: 5.5.4
+        version: 5.5.4
+
   packages/1xdev-users:
     dependencies:
       react:
