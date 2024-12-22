@@ -1,3 +1,2 @@
-
-@import url('../../node_modules/@uireact/foundation/dist/index.css'); 
 @import url('../../node_modules/@uireact/view/dist/index.css'); 
+@import '@1xdev/ui/src/theme/global.css'
