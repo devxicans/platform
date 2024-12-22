@@ -1,9 +1,11 @@
 import { CustomProject } from './custom-project'
-import './projects.module.scss'
+import styles from './projects.module.scss'
 
 export default function ProjectsPage() {
-  return <>
-  <CustomProject/>
-  <h1>ProjectPage</h1>
-  </>
+  return (
+    <div className={styles.main}>
+    <CustomProject/>
+    <h1>ProjectPage</h1>
+    </div>
+  )
 }
