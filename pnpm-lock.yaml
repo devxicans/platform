@@ -78,15 +78,27 @@ importers:
       '@1xdev/users':
         specifier: workspace:*
         version: link:../../packages/1xdev-users
+      '@formatjs/intl-localematcher':
+        specifier: ^0.5.9
+        version: 0.5.9
       '@uireact/foundation':
         specifier: ^3.1.4
         version: 3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
+      '@uireact/icons':
+        specifier: ^3.1.3
+        version: 3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/text':
         specifier: ^3.5.3
         version: 3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/view':
         specifier: ^3.5.3
         version: 3.5.3(@uireact/dialog@3.0.30)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
+      framer-motion:
+        specifier: ^11.15.0
+        version: 11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      negotiator:
+        specifier: ^1.0.0
+        version: 1.0.0
       next:
         specifier: ^14.1.1
         version: 14.1.1(@babel/core@7.23.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.83.0)
@@ -106,6 +118,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: ^14.1.1
         version: 14.1.4
+      '@types/negotiator':
+        specifier: ^0.6.3
+        version: 0.6.3
       '@types/node':
         specifier: ^20.11.24
         version: 20.11.24
@@ -687,6 +702,12 @@ packages:
   '@emnapi/wasi-threads@1.0.1':
     resolution: {integrity: sha512-iIBu7mwkq4UQGeMEM8bLwNK962nXdhodeScX4slfQnRhEMMzvYivHhutCIk8uojvmASXXPC2WNEjwxFWk72Oqw==, tarball: https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.0.1.tgz}
 
+  '@emotion/is-prop-valid@0.8.8':
+    resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==, tarball: https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz}
+
+  '@emotion/memoize@0.7.4':
+    resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==, tarball: https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.4.tgz}
+
   '@esbuild/android-arm64@0.19.7':
     resolution: {integrity: sha512-YEDcw5IT7hW3sFKZBkCAQaOCJQLONVcD4bOyTXMZz5fr66pTHnAet46XAtbXAkJRfIn2YVhdC6R9g4xa27jQ1w==, tarball: https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.19.7.tgz}
     engines: {node: '>=12'}
@@ -836,6 +857,9 @@ packages:
   '@eslint/js@8.57.0':
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==, tarball: https://registry.npmjs.org/@eslint/js/-/js-8.57.0.tgz}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@formatjs/intl-localematcher@0.5.9':
+    resolution: {integrity: sha512-8zkGu/sv5euxbjfZ/xmklqLyDGQSxsLqg8XOq88JW3cmJtzhCP8EtSJXlaKZnVO4beEaoiT9wj4eIoCQ9smwxA==, tarball: https://registry.npmjs.org/@formatjs/intl-localematcher/-/intl-localematcher-0.5.9.tgz}
 
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==, tarball: https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz}
@@ -1547,6 +1571,9 @@ packages:
 
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==, tarball: https://registry.npmjs.org/@types/minimist/-/minimist-1.2.5.tgz}
+
+  '@types/negotiator@0.6.3':
+    resolution: {integrity: sha512-JkXTOdKs5MF086b/pt8C3+yVp3iDUwG635L7oCH6HvJvvr6lSUU5oe/gLXnPEfYRROHjJIPgCV6cuAg8gGkntQ==, tarball: https://registry.npmjs.org/@types/negotiator/-/negotiator-0.6.3.tgz}
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==, tarball: https://registry.npmjs.org/@types/node/-/node-12.20.55.tgz}
@@ -3139,8 +3166,8 @@ packages:
     resolution: {integrity: sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==, tarball: https://registry.npmjs.org/form-data/-/form-data-4.0.1.tgz}
     engines: {node: '>= 6'}
 
-  framer-motion@11.13.5:
-    resolution: {integrity: sha512-rArI0zPU9VkpS3Wt0J7dmRxAFUWtzPWoSofNQAP0UO276CmJ+Xlf5xN19GMw3w2QsdrS2sU+0+Q2vtuz4IEZaw==, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-11.13.5.tgz}
+  framer-motion@11.15.0:
+    resolution: {integrity: sha512-MLk8IvZntxOMg7lDBLw2qgTHHv664bYoYmnFTmE0Gm/FW67aOJk0WM3ctMcG+Xhcv+vh5uyyXwxvxhSeJzSe+w==, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-11.15.0.tgz}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -4387,11 +4414,11 @@ packages:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==, tarball: https://registry.npmjs.org/modify-values/-/modify-values-1.0.1.tgz}
     engines: {node: '>=0.10.0'}
 
-  motion-dom@11.13.0:
-    resolution: {integrity: sha512-Oc1MLGJQ6nrvXccXA89lXtOqFyBmvHtaDcTRGT66o8Czl7nuA8BeHAd9MQV1pQKX0d2RHFBFaw5g3k23hQJt0w==, tarball: https://registry.npmjs.org/motion-dom/-/motion-dom-11.13.0.tgz}
+  motion-dom@11.14.3:
+    resolution: {integrity: sha512-lW+D2wBy5vxLJi6aCP0xyxTxlTfiu+b+zcpVbGVFUxotwThqhdpPRSmX8xztAgtZMPMeU0WGVn/k1w4I+TbPqA==, tarball: https://registry.npmjs.org/motion-dom/-/motion-dom-11.14.3.tgz}
 
-  motion-utils@11.13.0:
-    resolution: {integrity: sha512-lq6TzXkH5c/ysJQBxgLXgM01qwBH1b4goTPh57VvZWJbVJZF/0SB31UWEn4EIqbVPf3au88n2rvK17SpDTja1A==, tarball: https://registry.npmjs.org/motion-utils/-/motion-utils-11.13.0.tgz}
+  motion-utils@11.14.3:
+    resolution: {integrity: sha512-Xg+8xnqIJTpr0L/cidfTTBFkvRw26ZtGGuIhA94J9PQ2p4mEa06Xx7QVYZH0BP+EpMSaDlu+q0I0mmvwADPsaQ==, tarball: https://registry.npmjs.org/motion-utils/-/motion-utils-11.14.3.tgz}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==, tarball: https://registry.npmjs.org/ms/-/ms-2.1.2.tgz}
@@ -4423,6 +4450,10 @@ packages:
 
   negotiator@0.6.4:
     resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==, tarball: https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz}
+    engines: {node: '>= 0.6'}
+
+  negotiator@1.0.0:
+    resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==, tarball: https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz}
     engines: {node: '>= 0.6'}
 
   neo-async@2.6.2:
@@ -6825,6 +6856,14 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
+  '@emotion/is-prop-valid@0.8.8':
+    dependencies:
+      '@emotion/memoize': 0.7.4
+    optional: true
+
+  '@emotion/memoize@0.7.4':
+    optional: true
+
   '@esbuild/android-arm64@0.19.7':
     optional: true
 
@@ -6913,6 +6952,10 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@formatjs/intl-localematcher@0.5.9':
+    dependencies:
+      tslib: 2.6.2
 
   '@hapi/hoek@9.3.0': {}
 
@@ -7862,6 +7905,8 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/negotiator@0.6.3': {}
+
   '@types/node@12.20.55': {}
 
   '@types/node@20.11.24':
@@ -8109,23 +8154,23 @@ snapshots:
       '@typescript-eslint/types': 8.18.0
       eslint-visitor-keys: 4.2.0
 
-  '@uireact/button@3.2.9(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/view@3.5.3)(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
+  '@uireact/button@3.2.9(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/view@3.5.3)(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
     dependencies:
       '@uireact/foundation': 3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/view': 3.5.3(@uireact/dialog@3.0.30)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
-      framer-motion: 11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      framer-motion: 11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.6.2
 
-  '@uireact/dialog@3.0.30(@uireact/button@3.2.9)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/text@3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
+  '@uireact/dialog@3.0.30(@uireact/button@3.2.9)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/text@3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
     dependencies:
-      '@uireact/button': 3.2.9(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/view@3.5.3)(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
+      '@uireact/button': 3.2.9(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/view@3.5.3)(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/foundation': 3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
-      '@uireact/framer-animations': 0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
-      '@uireact/icons': 3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
+      '@uireact/framer-animations': 0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+      '@uireact/icons': 3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/text': 3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
-      framer-motion: 11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      framer-motion: 11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.6.2
@@ -8136,15 +8181,15 @@ snapshots:
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.6.2
 
-  '@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
+  '@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))':
     dependencies:
-      framer-motion: 11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      framer-motion: 11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
 
-  '@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
+  '@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
     dependencies:
       '@uireact/foundation': 3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
-      '@uireact/framer-animations': 0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
-      framer-motion: 11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@uireact/framer-animations': 0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+      framer-motion: 11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       tslib: 2.6.2
@@ -8158,7 +8203,7 @@ snapshots:
 
   '@uireact/view@3.5.3(@uireact/dialog@3.0.30)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)':
     dependencies:
-      '@uireact/dialog': 3.0.30(@uireact/button@3.2.9)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/text@3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
+      '@uireact/dialog': 3.0.30(@uireact/button@3.2.9)(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(@uireact/icons@3.1.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/framer-animations@0.8.2(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(@uireact/text@3.5.3(@uireact/foundation@3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2))(framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       '@uireact/foundation': 3.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tslib@2.6.2)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -8174,7 +8219,7 @@ snapshots:
       '@typescript-eslint/eslint-plugin': 6.17.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
       '@typescript-eslint/parser': 6.17.0(eslint@8.57.0)(typescript@5.5.4)
       eslint-config-prettier: 9.1.0(eslint@8.57.0)
-      eslint-import-resolver-alias: 1.1.2(eslint-plugin-import@2.29.0)
+      eslint-import-resolver-alias: 1.1.2(eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0))
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-plugin-import@2.29.0)(eslint@8.57.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@8.18.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)
@@ -9339,7 +9384,7 @@ snapshots:
       eslint: 8.57.0
       eslint-plugin-turbo: 2.0.0(eslint@8.57.0)
 
-  eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.29.0):
+  eslint-import-resolver-alias@1.1.2(eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)):
     dependencies:
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@8.18.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)
 
@@ -9356,7 +9401,7 @@ snapshots:
       debug: 4.3.4(supports-color@8.1.1)
       enhanced-resolve: 5.12.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@8.18.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
@@ -9368,7 +9413,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0(eslint@8.57.0)(typescript@5.5.4))(eslint-plugin-import@2.29.0)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7(supports-color@8.1.1)
     optionalDependencies:
@@ -9790,12 +9835,13 @@ snapshots:
       combined-stream: 1.0.8
       mime-types: 2.1.35
 
-  framer-motion@11.13.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  framer-motion@11.15.0(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      motion-dom: 11.13.0
-      motion-utils: 11.13.0
+      motion-dom: 11.14.3
+      motion-utils: 11.14.3
       tslib: 2.6.2
     optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
 
@@ -11353,9 +11399,9 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  motion-dom@11.13.0: {}
+  motion-dom@11.14.3: {}
 
-  motion-utils@11.13.0: {}
+  motion-utils@11.14.3: {}
 
   ms@2.1.2: {}
 
@@ -11384,6 +11430,8 @@ snapshots:
   natural-compare@1.4.0: {}
 
   negotiator@0.6.4: {}
+
+  negotiator@1.0.0: {}
 
   neo-async@2.6.2: {}
 
