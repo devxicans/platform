@@ -18,12 +18,15 @@ export function Header({ loc }: HeaderProps) {
           <h1>@1<span className={styles.spanText}>x</span>Dev</h1>
           <div className={styles.buttonMenu}>
             <MenuButton href="/">{loc.menuBtn1}</MenuButton>
-            <MenuButton href="/">{loc.menuBtn2}</MenuButton>
-            <MenuButton href="/">{loc.menuBtn3}</MenuButton>
+            <MenuButton href="/projects">{loc.menuBtn2}</MenuButton>
+            <MenuButton href="/contact">{loc.menuBtn3}</MenuButton>
           </div>
         </div>
       </UiViewport>
       <UiViewport criteria={Breakpoints.SMALL}>
+        <div className={styles.mobileHeader}>
+          <h1>@1<span className={styles.spanText}>x</span>Dev</h1>
+        </div>
         <div className={styles.mobileMenu}>
           <MobileButton icon="Home" href="/"/>
           <MobileButton icon="Layers" href="/projects"/>
