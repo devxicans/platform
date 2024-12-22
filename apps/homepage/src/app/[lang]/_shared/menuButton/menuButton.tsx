@@ -4,18 +4,18 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 type menuButtonProps = {
-  text: string;
+  children: React.ReactNode;
   href: string;
 };
 
-export function MenuButton({ text, href }: menuButtonProps) {
+export function MenuButton({ children, href }: menuButtonProps) {
   return (
     <Link href={href} className={styles.button}>
       <motion.div
         whileHover={{ y: 8 }}
         transition={{ type: "spring", stiffness: 100 }}
       >
-        {text}
+        {children}
       </motion.div>
     </Link>
   );
