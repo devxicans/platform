@@ -1,6 +1,10 @@
-import './contact.module.scss'
-import './contact-form'
+import styles from "./contact.module.scss";
+import "./contact-form";
 
 export default function ContactPage() {
-  return <h1>ContactPage</h1>
+  return (
+    <div className={styles.main}>
+      <h1>ContactPage</h1>
+    </div>
+  );
 }

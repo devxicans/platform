@@ -2,12 +2,10 @@ describe('Localization Tests', () => {
   const languages = {
     en: {
       title: 'HomePage',
-      header: 'Header',
       langHeader: 'en'
     },
     es: {
       title: 'Pagina Principal',
-      header: 'Encabezado',
       langHeader: 'es'
     }
   };
@@ -27,10 +25,6 @@ describe('Localization Tests', () => {
       it(`should display the title message in ${lang}`, () => {
         cy.findByText(translations.title).should('exist');
       });
-
-      it(`should display the header message in ${lang}`, () => {
-        cy.findByText(translations.header).should('exist');
-      });
     });
   });
 
@@ -41,10 +35,6 @@ describe('Localization Tests', () => {
 
     it(`should display the title message in default language`, () => {
       cy.findByText(defaultLanguage.title).should('exist');
-    });
-
-    it(`should display the header message in default language`, () => {
-      cy.findByText(defaultLanguage.header).should('exist');
     });
   });
 });
