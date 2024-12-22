@@ -5,8 +5,8 @@ interface CardProps  {
   
   export const CardCustom = ({children, className}: CardProps) => { 
     return (
-    <div className = {className}> 
-      {children}
-    </div>
+      <div className={className}>
+        {children}
+      </div>
    )
   }
