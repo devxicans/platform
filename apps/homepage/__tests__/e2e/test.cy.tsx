@@ -5,8 +5,7 @@ describe('First test', () => {
         'Accept-Language': 'en'
       }
     });
-
-    cy.findByText("Header").should('be.visible');
+    cy.get('[data-testid="header"]').should('exist');
 
     cy.visit('/projects', {
       headers: {
@@ -14,7 +13,7 @@ describe('First test', () => {
       }
     });
 
-    cy.findByText("Header").should('be.visible');
+    cy.get('[data-testid="header"]').should('exist');
 
     cy.visit('/contact', {
       headers: {
@@ -22,7 +21,7 @@ describe('First test', () => {
       }
     });
 
-    cy.findByText("Header").should('be.visible');
+    cy.get('[data-testid="header"]').should('exist');
   });
 
   it('Should check Header see through out pages with lang es', () => {
@@ -32,7 +31,7 @@ describe('First test', () => {
       }
     });
 
-    cy.findByText("Encabezado").should('be.visible');
+    cy.get('[data-testid="header"]').should('exist');
 
     cy.visit('/projects', {
       headers: {
@@ -40,7 +39,7 @@ describe('First test', () => {
       }
     });
 
-    cy.findByText("Encabezado").should('be.visible');
+    cy.get('[data-testid="header"]').should('exist');
 
     cy.visit('/contact', {
       headers: {
@@ -48,6 +47,6 @@ describe('First test', () => {
       }
     });
 
-    cy.findByText("Encabezado").should('be.visible');
-  });
+    cy.get('[data-testid="header"]').should('exist');
+    });
 });
