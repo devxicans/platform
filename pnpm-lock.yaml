@@ -154,6 +154,9 @@ importers:
       '@1xdev/pablo':
         specifier: workspace:*
         version: link:../../packages/1xdev-ceja
+      '@1xdev/ui':
+        specifier: workspace:*
+        version: link:../../packages/1xdev-ui
       '@1xdev/users':
         specifier: workspace:*
         version: link:../../packages/1xdev-users
