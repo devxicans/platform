@@ -18,7 +18,9 @@ The packages exported here will be used from all the products we create to share
 - `pnpm lint` - Lint all packages
 - `pnpm test` - Run unit test in all packages
 - `pnpm test:cypress:dev --filter=@1xdev/APPLICATION` - Run cypress tests in a specific application.
-  - This will start up the application and run cypress on it.
+  - Make sure nothing is running as the port will conflict if dev is running.
+  - By running this command, this will start up the application you selected in the filter option and open the cypress UI.
+  - Select E2E and the browser and you should be able to see cypress running the test suite you select.
 - `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
 
 ## Running app
