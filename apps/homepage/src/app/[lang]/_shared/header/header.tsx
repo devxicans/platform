@@ -17,9 +17,9 @@ export function Header({ loc }: HeaderProps) {
         <div className={styles.main} data-testid="header">
           <h1>@1<span className={styles.spanText}>x</span>Dev</h1>
           <div className={styles.buttonMenu}>
-            <MenuButton href="/">{loc.menuBtn1}</MenuButton>
-            <MenuButton href="/projects">{loc.menuBtn2}</MenuButton>
-            <MenuButton href="/contact">{loc.menuBtn3}</MenuButton>
+            <MenuButton href="/">{loc.homeLink}</MenuButton>
+            <MenuButton href="/projects">{loc.projectsLink}</MenuButton>
+            <MenuButton href="/contact">{loc.contactLink}</MenuButton>
           </div>
         </div>
       </UiViewport>

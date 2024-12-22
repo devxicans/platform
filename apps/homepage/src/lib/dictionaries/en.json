@@ -1,7 +1,7 @@
 {
   "title" : "HomePage",
   "header" : "Header",
-  "menuBtn1":"Home",
-  "menuBtn2":"Projects",
-  "menuBtn3":"Contact"
+  "homeLink":"Home",
+  "projectsLink":"Projects",
+  "contactLink":"Contact"
 }

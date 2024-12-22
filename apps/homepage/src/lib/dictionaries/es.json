@@ -1,7 +1,7 @@
 {
   "title" : "Pagina Principal",
   "header" : "Encabezado",
-  "menuBtn1":"Inicio",
-  "menuBtn2":"Proyectos",
-  "menuBtn3":"Contacto"
+  "homeLink":"Inicio",
+  "projectsLink":"Proyectos",
+  "contactLink":"Contacto"
 }
