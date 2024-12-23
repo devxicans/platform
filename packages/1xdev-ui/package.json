@@ -1,5 +1,5 @@
 {
-  "name": "@1xdev/pablo",
+  "name": "@1xdev/ui",
   "version": "0.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
