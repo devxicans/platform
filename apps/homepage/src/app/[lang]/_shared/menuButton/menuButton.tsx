@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { UiIcon, UiIconProps } from "@uireact/icons";
 import { useState } from "react";
+import { useCallback } from "react";
 
 type menuButtonProps = {
   children: React.ReactNode;
@@ -14,8 +15,16 @@ type menuButtonProps = {
 export function MenuButton({ children, href, icon }: menuButtonProps) {
   const [showIcon, setShowIcon] = useState(false);
 
+  const onMouseEnter = useCallback(() => {
+    setShowIcon(true);
+  }, [setShowIcon]);
+
+  const onMouseLeave = useCallback(() => {
+    setShowIcon(false);
+  }, [setShowIcon]);
+
   return (
-    <Link href={href} className={styles.button} onMouseEnter={() => setShowIcon(true)} onMouseLeave={() => setShowIcon(false)}>
+    <Link href={href} className={styles.button} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <motion.div
         whileHover={{ y: 8 }}
         transition={{ type: "spring", stiffness: 100 }}
