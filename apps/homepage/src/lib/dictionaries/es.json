@@ -1,5 +1,7 @@
 {
-  "heroText" : "Diseñamos el futuro siendo humanos",
+  "heroText": "Nosotros diseñamos el futuro mientras somos humanos.",
+  "heroTextAnimateWords": ["diseñar", "crear", "codificar"],
+  "heroTextAnimateDescriptions": ["desarrolladores", "artistas"],
   "header" : "Encabezado",
   "homeLink":"Inicio",
   "projectsLink":"Proyectos",
