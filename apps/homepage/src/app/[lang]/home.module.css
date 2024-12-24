@@ -4,5 +4,25 @@
 
 .hero {
   text-align: center;
-  padding-top: 100px;
+  padding: 2rem;
+}
+
+.heroText {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.word {
+  color: magenta;
+  font-weight: bold;
+}
+
+.description {
+  color: white;
 }
