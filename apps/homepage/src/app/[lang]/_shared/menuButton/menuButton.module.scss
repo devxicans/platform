@@ -3,8 +3,14 @@
   font-weight: bold;
   padding: 0 15px 0 15px;
   align-content: center;
+  justify-content: center;
 }
 
 .button:hover{
   color: var(--tertiary-token_100);
+}
+
+.animation{
+  display: block;
+  justify-items: center;
 }
