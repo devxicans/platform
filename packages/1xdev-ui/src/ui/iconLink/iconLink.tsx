@@ -1,18 +1,17 @@
 "use client";
-import styles from "./menuButton.module.scss";
+import styles from "./iconLink.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { UiIcon, UiIconProps } from "@uireact/icons";
-import { useState } from "react";
-import { useCallback } from "react";
+import { useState, useCallback } from "react";
 
-type menuButtonProps = {
+type iconLinkProps = {
   children: React.ReactNode;
   href: string;
   icon: UiIconProps["icon"];
 };
 
-export function MenuButton({ children, href, icon }: menuButtonProps) {
+export function IconLink({ children, href, icon }: iconLinkProps) {
   const [showIcon, setShowIcon] = useState(false);
 
   const onMouseEnter = useCallback(() => {
