@@ -1,6 +1,6 @@
 "use client";
 import styles from "./header.module.scss";
-import { MenuButton } from "../menuButton";
+import { IconLink } from "@1xdev/ui";
 import { MobileButton } from "../mobileButton";
 import { Breakpoints, UiViewport } from "@uireact/foundation";
 
@@ -17,9 +17,9 @@ export function Header({ loc }: HeaderProps) {
         <div className={styles.main} data-testid="header">
           <h1>@1<span className={styles.spanText}>x</span>Dev</h1>
           <div className={styles.buttonMenu}>
-            <MenuButton href="/" icon="Home">{loc.homeLink}</MenuButton>
-            <MenuButton href="/projects" icon="Layers">{loc.projectsLink}</MenuButton>
-            <MenuButton href="/contact" icon="Mail">{loc.contactLink}</MenuButton>
+            <IconLink href="/" icon="Home">{loc.homeLink}</IconLink>
+            <IconLink href="/projects" icon="Layers">{loc.projectsLink}</IconLink>
+            <IconLink href="/contact" icon="Mail">{loc.contactLink}</IconLink>
           </div>
         </div>
       </UiViewport>
