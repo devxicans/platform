@@ -1,11 +1,11 @@
 describe('Localization Tests', () => {
   const languages = {
     en: {
-      heroText: "We engineer the future while being humans",
+      homeLink: "Home",
       langHeader: 'en'
     },
     es: {
-      heroText: "Nosotros diseñamos el futuro mientras somos humanos.",
+      homeLink: "Inicio",
       langHeader: 'es'
     }
   };
@@ -23,7 +23,7 @@ describe('Localization Tests', () => {
       });
 
       it(`should display the title message in ${lang}`, () => {
-        cy.findByText(translations.heroText).should('exist');
+        cy.findByText(translations.homeLink).should('exist');
       });
     });
   });
@@ -34,7 +34,7 @@ describe('Localization Tests', () => {
     });
 
     it(`should display the title message in default language`, () => {
-      cy.findByText(defaultLanguage.heroText).should('exist');
+      cy.findByText(defaultLanguage.homeLink).should('exist');
     });
   });
 });
