@@ -1,6 +1,6 @@
 "use client";
 import styles from "./header.module.scss";
-import { MenuButton } from "../menuButton";
+import { MenuButton } from "@1xdev/ui";
 import { MobileButton } from "../mobileButton";
 import { Breakpoints, UiViewport } from "@uireact/foundation";
 

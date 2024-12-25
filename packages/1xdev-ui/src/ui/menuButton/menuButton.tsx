@@ -3,8 +3,7 @@ import styles from "./menuButton.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { UiIcon, UiIconProps } from "@uireact/icons";
-import { useState } from "react";
-import { useCallback } from "react";
+import { useState, useCallback } from "react";
 
 type menuButtonProps = {
   children: React.ReactNode;
