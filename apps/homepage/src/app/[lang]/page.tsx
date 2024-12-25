@@ -1,6 +1,5 @@
 'use client'
 import styles from './home.module.css'
-import { useLocalization } from '../../lib/context/loc-context'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -22,7 +21,7 @@ export default function AppPage() {
 
   return (
     <div className={styles.hero}>
-      <div className={styles.animation}>
+      <div data-testid='header' className={styles.animation}>
         <span>We </span>
         <AnimatePresence initial={false} mode='wait'>
           <motion.span
