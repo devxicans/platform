@@ -1,7 +1,7 @@
 {
   "heroText" : "We engineer the future while being humans",
   "heroTextAnimateWords": ["engineer", "create", "code"],
-  "heroTextAnimateDescriptions": ["developers", "artists"],
+  "heroTextAnimateDescriptions": ["'humans", "developers", "artists"],
   "header" : "Header",
   "homeLink":"Home",
   "projectsLink":"Projects",

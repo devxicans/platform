@@ -1,28 +1,24 @@
-.main {
-  min-height: 100vh;
-}
-
 .hero {
+  min-height: calc(100vh - 70px);
   text-align: center;
-  padding: 2rem;
-}
-
-.heroText {
-  font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .animation {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  font-size: var(--texts-level3);
+  gap: .5rem;
 }
 
 .word {
-  color: magenta;
-  font-weight: bold;
+  color: var(--tertiary-token_100);
+  font-weight: bolder;
+  margin: 0 .75rem;
 }
 
 .description {
-  color: white;
+  color: var(--tertiary-token_100);
+  font-weight: bolder;
+  margin: 0 .75rem;
 }
