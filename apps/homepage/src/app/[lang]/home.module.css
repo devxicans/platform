@@ -1,6 +1,7 @@
 .hero {
   min-height: calc(100vh - 70px);
   text-align: center;
+  margin-top: 2rem;
 }
 
 .animation {
@@ -21,4 +22,12 @@
   color: var(--tertiary-token_100);
   font-weight: bolder;
   margin: 0 .75rem;
+}
+
+.animation_s_m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--texts-level5);
+  gap: .5rem;
 }

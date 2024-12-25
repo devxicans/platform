@@ -2,6 +2,7 @@
 import styles from './home.module.css'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { UiViewport } from '@uireact/foundation';
 
 const keyWords = [
   { word: 'engineer', description: 'humans' },
@@ -20,38 +21,77 @@ export default function AppPage() {
   }, []);
 
   return (
-    <div className={styles.hero}>
-      <div data-testid='header' className={styles.animation}>
-        <span>We </span>
-        <AnimatePresence initial={false} mode='wait'>
-          <motion.span
-            key={keyWords[index].word}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className={styles.word}
-          >
-            {keyWords[index].word}
-          </motion.span>
-        </AnimatePresence>
-        <span> the future </span>
-      </div>
-      <div className={styles.animation}>
-        <span> while being </span>
-        <AnimatePresence initial={false} mode='wait'>
-          <motion.span
-            key={keyWords[index].description}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className={styles.description}
-          >
-            {keyWords[index].description}.
-          </motion.span>
-        </AnimatePresence>
-      </div>
-    </div>
+    <>
+      <UiViewport criteria='l|xl'>
+        <div className={styles.hero}>
+          <div data-testid='header' className={styles.animation}>
+            <span>We </span>
+            <AnimatePresence initial={false} mode='wait'>
+              <motion.span
+                key={keyWords[index].word}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={styles.word}
+              >
+                {keyWords[index].word}
+              </motion.span>
+            </AnimatePresence>
+            <span> the future </span>
+          </div>
+          <div className={styles.animation}>
+            <span> while being </span>
+            <AnimatePresence initial={false} mode='wait'>
+              <motion.span
+                key={keyWords[index].description}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={styles.description}
+              >
+                {keyWords[index].description}.
+              </motion.span>
+            </AnimatePresence>
+          </div>
+        </div>
+      </UiViewport>
+      <UiViewport criteria='s|m'>
+        <div className={styles.hero}>
+          <div data-testid='header' className={styles.animation_s_m}>
+            <span>We </span>
+            <AnimatePresence initial={false} mode='wait'>
+              <motion.span
+                key={keyWords[index].word}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={styles.word}
+              >
+                {keyWords[index].word}
+              </motion.span>
+            </AnimatePresence>
+            <span> the future </span>
+          </div>
+          <div className={styles.animation_s_m}>
+            <span> while being </span>
+            <AnimatePresence initial={false} mode='wait'>
+              <motion.span
+                key={keyWords[index].description}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={styles.description}
+              >
+                {keyWords[index].description}.
+              </motion.span>
+            </AnimatePresence>
+          </div>
+        </div>
+      </UiViewport>
+    </>
   )
 }
