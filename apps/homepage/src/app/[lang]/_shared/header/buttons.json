@@ -1,0 +1,17 @@
+[
+  {
+    "href": "/",
+    "icon": "Home",
+    "key": "homeLink"
+  },
+  {
+    "href": "/projects",
+    "icon": "Layers",
+    "key": "projectsLink"
+  },
+  {
+    "href": "/contact",
+    "icon": "Mail",
+    "key": "contactLink"
+  }
+]
