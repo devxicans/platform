@@ -41,9 +41,9 @@ export function Header({ loc }: HeaderProps) {
           <h1>@1<span className={styles.spanText}>x</span>Dev</h1>
         </div>
         <div className={styles.mobileMenu}>
-          <MobileButton icon="Home" href="/"/>
-          <MobileButton icon="Layers" href="/projects"/>
-          <MobileButton icon="Mail" href="/contact"/>
+          <MobileButton icon="Home" href="/" active={pathname === "/en" || pathname === "/es"}/>
+          <MobileButton icon="Layers" href="/projects" active={pathname === "/en/projects" || pathname === "/es/projects"}/>
+          <MobileButton icon="Mail" href="/contact" active={pathname === "/en/contact" || pathname === "/es/contact"}/>
         </div>
       </UiViewport>
     </>
