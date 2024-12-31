@@ -1,7 +1,7 @@
 "use client";
 import styles from "./header.module.scss";
 import { IconLink } from "@1xdev/ui";
-import { UiViewport } from "@uireact/foundation";
+import { UiViewport, Breakpoints } from "@uireact/foundation";
 import buttons from "./buttons.json";
 import { UiIconProps } from "@uireact/icons";
 import { usePathname } from "next/navigation";
@@ -40,7 +40,9 @@ export function Header({ loc }: HeaderProps) {
           </div>
         </div>
       </UiViewport>
-      <SmallNavbar/>
+      <UiViewport criteria={Breakpoints.SMALL}>
+        <SmallNavbar/>
+      </UiViewport>
     </>
   );
 }
