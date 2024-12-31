@@ -4,16 +4,18 @@ import { MobileButton } from "../mobileButton";
 import { usePathname } from "next/navigation";
 import buttons from "../header/buttons.json";
 import { UiIconProps } from "@uireact/icons";
+import { useMemo } from "react";
 
 export function SmallNavbar() {
   const pathname = usePathname();
 
-  const getFormattedPath = (pathname: string) => {
-    const cleanedPath = pathname.replace(/^\/(es|en)/, "");
-    return cleanedPath === "" ? "/" : cleanedPath;
-  };
-
-  const formattedPath = getFormattedPath(pathname);
+  const formattedPath = useMemo(() => {
+    const getFormattedPath = (pathname: string) => {
+      const cleanedPath = pathname.replace(/^\/(es|en)/, "");
+      return cleanedPath === "" ? "/" : cleanedPath;
+    };
+    return getFormattedPath(pathname);
+  }, [pathname]);
 
   return (
     <>
