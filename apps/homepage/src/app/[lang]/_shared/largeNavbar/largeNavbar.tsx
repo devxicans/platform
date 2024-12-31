@@ -4,6 +4,7 @@ import { IconLink } from "@1xdev/ui";
 import buttons from "../header/buttons.json";
 import { UiIconProps } from "@uireact/icons";
 import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 
 type HeaderProps = {
   loc: {
@@ -14,12 +15,13 @@ type HeaderProps = {
 export function LargeNavbar({ loc }: HeaderProps) {
   const pathname = usePathname();
 
-  const getFormattedPath = (pathname: string) => {
-    const cleanedPath = pathname.replace(/^\/(es|en)/, "");
-    return cleanedPath === "" ? "/" : cleanedPath;
-  };
-
-  const formattedPath = getFormattedPath(pathname);
+  const formattedPath = useMemo(() => {
+    const getFormattedPath = (pathname: string) => {
+      const cleanedPath = pathname.replace(/^\/(es|en)/, "");
+      return cleanedPath === "" ? "/" : cleanedPath;
+    };
+    return getFormattedPath(pathname);
+  }, [pathname]);
 
   return (
     <>
