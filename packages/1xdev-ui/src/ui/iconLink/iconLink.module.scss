@@ -6,6 +6,15 @@
   justify-content: center;
 }
 
+.buttonActive{
+  color: var(--tertiary-token_100);
+  font-weight: bold;
+  padding: 0 15px 0 15px;
+  align-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
 .button:hover{
   color: var(--tertiary-token_100);
 }
