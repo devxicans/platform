@@ -1,0 +1,21 @@
+.spanText{
+  color: var(--tertiary-token_100);
+}
+
+.mobileHeader{
+  display: flex;
+  padding: 10px 20px;
+  user-select: none;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.mobileMenu{
+  justify-content: space-evenly;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
