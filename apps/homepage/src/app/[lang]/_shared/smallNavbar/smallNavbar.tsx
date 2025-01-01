@@ -10,11 +10,8 @@ export function SmallNavbar() {
   const pathname = usePathname();
 
   const formattedPath = useMemo(() => {
-    const getFormattedPath = (pathname: string) => {
       const cleanedPath = pathname.replace(/^\/(es|en)/, "");
       return cleanedPath === "" ? "/" : cleanedPath;
-    };
-    return getFormattedPath(pathname);
   }, [pathname]);
 
   return (
