@@ -6,12 +6,13 @@ import { UiIcon, UiIconProps } from "@uireact/icons";
 type menuButtonProps = {
   icon: UiIconProps["icon"];
   href: string;
+  active?: boolean;
 };
 
-export function MobileButton({ icon, href }: menuButtonProps) {
+export function MobileButton({ icon, href, active }: menuButtonProps) {
   return (
       <Link href={href} className={styles.button}>
-        <UiIcon icon={icon} size="large"/>
+        <UiIcon icon={icon} size="large" category={active ? "tertiary" : "secondary"}/>
       </Link>
   );
 }

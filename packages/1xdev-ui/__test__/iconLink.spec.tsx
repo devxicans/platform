@@ -18,4 +18,10 @@ describe('Icon Link Component', () => {
     fireEvent.mouseLeave(link);
     expect(screen.queryByTestId('Icon')).not.toBeInTheDocument();
   });
+
+  test('Should apply the active class when active prop is true', () => {
+    render(<IconLink href='/' icon='Home' active={true}>Home</IconLink>);
+    expect(screen.getByRole('link', {name: 'Home'})).toHaveClass('buttonActive');
+  });
+
 })

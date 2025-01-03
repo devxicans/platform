@@ -9,9 +9,10 @@ type iconLinkProps = {
   children: React.ReactNode;
   href: string;
   icon: UiIconProps["icon"];
+  active?:boolean;
 };
 
-export function IconLink({ children, href, icon }: iconLinkProps) {
+export function IconLink({ children, href, icon, active }: iconLinkProps) {
   const [showIcon, setShowIcon] = useState(false);
 
   const onMouseEnter = useCallback(() => {
@@ -23,7 +24,7 @@ export function IconLink({ children, href, icon }: iconLinkProps) {
   }, [setShowIcon]);
 
   return (
-    <Link href={href} className={styles.button} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <Link href={href} className={active ? styles.buttonActive : styles.button} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <motion.div
         whileHover={{ y: 8 }}
         transition={{ type: "spring", stiffness: 100 }}
