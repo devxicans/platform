@@ -1,11 +1,11 @@
 describe('Localization Tests', () => {
   const languages = {
     en: {
-      title: 'HomePage',
+      homeLink: "Home",
       langHeader: 'en'
     },
     es: {
-      title: 'Pagina Principal',
+      homeLink: "Inicio",
       langHeader: 'es'
     }
   };
@@ -23,7 +23,7 @@ describe('Localization Tests', () => {
       });
 
       it(`should display the title message in ${lang}`, () => {
-        cy.findByText(translations.title).should('exist');
+        cy.findByText(translations.homeLink).should('exist');
       });
     });
   });
@@ -34,7 +34,7 @@ describe('Localization Tests', () => {
     });
 
     it(`should display the title message in default language`, () => {
-      cy.findByText(defaultLanguage.title).should('exist');
+      cy.findByText(defaultLanguage.homeLink).should('exist');
     });
   });
 });
