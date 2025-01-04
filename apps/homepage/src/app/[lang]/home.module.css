@@ -1,7 +1,6 @@
 .hero {
   min-height: calc(100vh - 70px);
   text-align: center;
-  margin-top: 2rem;
 }
 
 .wrapper {
@@ -12,11 +11,14 @@
   text-align: center;
   gap: 1rem;
   font-weight: 900;
+
+  &.isMobile {
+    font-size: 1rem;
+  }
 }
 
 .dynamic {
   color: var(--tertiary-token_100);
-  margin: 0 .75rem;
 }
 
 .animation_s_m {

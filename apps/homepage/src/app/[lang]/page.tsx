@@ -34,7 +34,7 @@ export default function AppPage() {
 
   return (
     <>
-      <UiViewport criteria='l|xl'>
+      <UiViewport data-testid='hero message' criteria='l|xl'>
         <div className={styles.hero}>
           <div className={styles.wrapper}>
             {phraseParts.map(({ content, isDynamic, key }) =>
@@ -52,47 +52,36 @@ export default function AppPage() {
                 </motion.span>
               </AnimatePresence>
               ) : (
-                <span key={key}>{content} </span>
+                <span key={key}>{content}</span>
               )
             )}
           </div>
         </div>
       </UiViewport>
-      {/* <UiViewport criteria='s|m'>
+      <UiViewport criteria='s|m'>
         <div className={styles.hero}>
-          <div data-testid='header' className={styles.animation_s_m}>
-            <span>We </span>
-            <AnimatePresence initial={false} mode='wait'>
-              <motion.span
-                key={keyWords[index].word}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className={styles.word}
-              >
-                {keyWords[index].word}
-              </motion.span>
-            </AnimatePresence>
-            <span> the future </span>
+            <div className={`${styles.wrapper} ${styles.isMobile}`}>
+              {phraseParts.map(({ content, isDynamic, key }) =>
+                isDynamic ? (
+                <AnimatePresence key={key} initial={false} mode="wait">
+                  <motion.span
+                    key={content}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className={styles.dynamic}
+                  >
+                    {content.slice(1, -1)}
+                  </motion.span>
+                </AnimatePresence>
+                ) : (
+                  <span key={key}>{content} </span>
+                )
+              )}
+            </div>
           </div>
-          <div className={styles.animation_s_m}>
-            <span> while being </span>
-            <AnimatePresence initial={false} mode='wait'>
-              <motion.span
-                key={keyWords[index].description}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className={styles.description}
-              >
-                {keyWords[index].description}.
-              </motion.span>
-            </AnimatePresence>
-          </div>
-        </div>
-      </UiViewport> */}
+      </UiViewport>
     </>
   )
 }
