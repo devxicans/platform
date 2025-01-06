@@ -7,8 +7,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
   text-align: center;
+  font-size: 2rem;
   gap: 1rem;
   font-weight: 900;
 
@@ -19,12 +19,4 @@
 
 .dynamic {
   color: var(--tertiary-token_100);
-}
-
-.animation_s_m {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--texts-level5);
-  gap: .5rem;
 }
