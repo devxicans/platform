@@ -2,7 +2,6 @@
 import styles from './home.module.css'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { UiViewport } from '@uireact/foundation';
 import { renderDynamicPhrase } from './utils';
 import { UiText } from '@uireact/text'
 
