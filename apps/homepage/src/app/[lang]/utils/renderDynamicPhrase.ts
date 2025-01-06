@@ -22,8 +22,17 @@ export function renderDynamicPhrase({ phrase, keyWords, keyDescriptions }: KeyWo
     return getPhrase()
   }
 
+  const splitPhrase = (phrase: string) => {
+    return phrase.split(" ").map((word, idx) => ({
+        content: word,
+        isDynamic: word.startsWith("{") && word.endsWith("}"),
+        key: idx
+    }));
+  }
+
   return {
     getPhrase,
-    next
+    next,
+    splitPhrase
   }
 }

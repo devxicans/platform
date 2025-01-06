@@ -8,13 +8,14 @@ import { UiText } from '@uireact/text'
 
 const phraseData = {
   phrase: "We {keyWords} the future while being {keyDescriptions}",
-  keyWords: ['{engineer}', '{create}', '{code}'],
+  keyWords: ["{engineer}", '{create}', '{code}'],
   keyDescriptions: ['{humans}', '{developers}', '{artists}']
 }
 
 export default function AppPage() {
-  const { getPhrase, next } = renderDynamicPhrase(phraseData);
+  const { getPhrase, next, splitPhrase } = renderDynamicPhrase(phraseData);
   const [phrase, setPhrase] = useState(getPhrase());
+  const phraseParts = splitPhrase(phrase);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,16 +23,6 @@ export default function AppPage() {
     }, 3000);
     return () => clearInterval(interval);
   }, [next]);
-
-  const splitPhrase = (phrase: string) => {
-    return phrase.split(" ").map((word, idx) => ({
-      content: word,
-      isDynamic: word.startsWith("{") && word.endsWith("}"),
-      key: idx
-    }));
-  };
-
-  const phraseParts = splitPhrase(phrase);
 
   return (
     <>
