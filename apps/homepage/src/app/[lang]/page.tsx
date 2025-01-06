@@ -26,7 +26,7 @@ export default function AppPage() {
 
   return (
     <>
-      <UiViewport data-testid='hero message' criteria='l|xl'>
+      <div data-testid='hero message'>
         <div className={styles.hero}>
           <div className={styles.wrapper}>
             {phraseParts.map(({ content, isDynamic, key }) =>
@@ -51,7 +51,7 @@ export default function AppPage() {
             )}
           </div>
         </div>
-      </UiViewport>
+      </div>
     </>
   )
 }
