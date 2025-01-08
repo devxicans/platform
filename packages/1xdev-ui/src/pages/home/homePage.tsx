@@ -11,7 +11,7 @@ const phraseData = {
   keyDescriptions: ['{humans}', '{developers}', '{artists}']
 }
 
-export function homePage() {
+export function HomePage() {
   const { getPhrase, next, splitPhrase } = renderDynamicPhrase(phraseData);
   const [phrase, setPhrase] = useState(getPhrase());
   const phraseParts = splitPhrase(phrase);
