@@ -1,5 +1,5 @@
 .input{
-  padding: 12px 10px;
+  padding: 18px 10px 10px 10px;
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -48,6 +48,7 @@
   color: black;
   font-weight: bold;
   transition: all 0.3s ease;
+  user-select: none;
 }
 
 .input:focus ~ .label,
