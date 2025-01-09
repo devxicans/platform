@@ -1,0 +1,25 @@
+.input{
+  width: 100%;
+  border: 5px solid var(--primary-token_10);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.input:focus{
+  outline: none;
+}
+
+.input::placeholder{
+  font-weight: bold;
+  color: var(--primary-token_10);
+}
+.inputContainer{
+  background-color: var(--secondary-token_10);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.error{
+  background-color: var(--error-token_50);
+}
