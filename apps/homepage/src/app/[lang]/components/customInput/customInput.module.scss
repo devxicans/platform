@@ -44,13 +44,14 @@
 .label{
   position: absolute;
   align-self: center;
-  left: 43px;
+  left: 46px;
   color: black;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
-.input:focus ~ .label{
+.input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
   top: 3px;
   font-size: 14px;
 }

@@ -35,6 +35,7 @@ export const CustomInput = ({
             value={value}
             name={name}
             className={styles.input}
+            placeholder=""
           />
           <label htmlFor={id} className={styles.label}>
             {label}
