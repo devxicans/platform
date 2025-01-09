@@ -1,0 +1,54 @@
+.inputContainer{
+  position: relative;
+  border: 3px solid var(--secondary-token_10);
+  background-color: white;
+  border-radius: 13px;
+  display: flex;
+}
+
+.inputBorder{
+  width: 100%;
+  border: 5px solid var(--primary-token_10);
+  border-radius: 10px;
+  display: flex;
+}
+
+.icon{
+  margin-top: 15px;
+  margin-left: 10px;
+  color: black;
+}
+
+.error{
+  border: 3px solid var(--error-token_50);
+}
+
+.textArea{
+  padding: 0px 10px;
+  margin: 15px 0px 10px 0px;
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  font-size: var(--texts-small);
+  resize: none;
+}
+
+.textArea:focus{
+  outline: none;
+}
+
+.label{
+  position: absolute;
+  top: 15px;
+  left: 46px;
+  color: black;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.textArea:focus ~ .label,
+.textArea:not(:placeholder-shown) ~ .label {
+  top: 3px;
+  font-size: 14px;
+}
