@@ -10,7 +10,7 @@ export function ContactForm() {
           name="name"
           id="name-input"
           label="Name"
-          icon="Mail"
+          icon="UserSimple"
         />
         <CustomInput
           type="text"
@@ -24,7 +24,7 @@ export function ContactForm() {
           name="name"
           id="phone-input"
           label="Phone"
-          icon="Mail"
+          icon="CirclePhone"
         />
         <button type="submit" className={styles.btn}>
           Contact

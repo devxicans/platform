@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from "./customInput.module.scss";
 import { UiIcon, UiIconProps } from "@uireact/icons";
 
@@ -22,18 +22,23 @@ export const CustomInput = ({
   return (
     <div>
       <div className={styles.inputContainer}>
-        <label htmlFor={id} className={styles.label}>
-          {label}
-        </label>
         <div className={styles.inputBorder}>
-        <UiIcon icon={icon} category="primary" className={styles.icon} coloration="dark"/>
-        <input
-          type={type}
-          id={id}
-          value={value}
-          name={name}
-          className={styles.input}
-        />
+          <UiIcon
+            icon={icon}
+            category="primary"
+            className={styles.icon}
+            coloration="dark"
+          />
+          <input
+            type={type}
+            id={id}
+            value={value}
+            name={name}
+            className={styles.input}
+          />
+          <label htmlFor={id} className={styles.label}>
+            {label}
+          </label>
         </div>
       </div>
     </div>
