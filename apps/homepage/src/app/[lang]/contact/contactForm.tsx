@@ -9,22 +9,22 @@ export function ContactForm() {
           type="text"
           name="name"
           id="name-input"
-          placeholder="Your name"
           label="Name"
+          icon="Mail"
         />
         <CustomInput
           type="text"
           name="email"
           id="email-input"
-          placeholder="Your email"
           label="Email"
+          icon="Mail"
         />
         <CustomInput
           type="number"
           name="name"
           id="phone-input"
-          placeholder="Your phone"
           label="Phone"
+          icon="Mail"
         />
         <button type="submit" className={styles.btn}>
           Contact
