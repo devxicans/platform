@@ -1,7 +1,13 @@
 {
-  "title" : "Pagina Principal",
-  "header" : "Encabezado",
-  "homeLink":"Inicio",
-  "projectsLink":"Proyectos",
-  "contactLink":"Contacto"
+  "title": "Pagina Principal",
+  "header": "Encabezado",
+  "homeLink": "Inicio",
+  "projectsLink": "Proyectos",
+  "contactLink": "Contacto",
+  "contactFormTitle": "Cuéntanos sobre tu proyecto",
+  "nameInput": "Nombre",
+  "emailInput": "Correo",
+  "phoneInput": "Teléfono",
+  "messageInput": "Mensaje",
+  "submitBtn": "Contactar"
 }

@@ -1,40 +1,44 @@
+'use client'
 import { CustomInput } from "../components";
 import { CustomTextArea } from "../components";
 import styles from "./contactForm.module.scss";
+import { useLocalization } from '../../../lib/context/loc-context';
 
 export function ContactForm() {
+  const loc = useLocalization();
+  
   return (
     <form className={styles.form}>
-      <h2 className={styles.title}>Tell us about your project</h2>
+      <h2 className={styles.title}>{loc.contactFormTitle}</h2>
       <CustomInput
         type="text"
         name="name"
         id="name-input"
-        label="Name"
+        label={loc.nameInput}
         icon="UserSimple"
       />
       <CustomInput
         type="text"
         name="email"
         id="email-input"
-        label="Email"
+        label={loc.emailInput}
         icon="Mail"
       />
       <CustomInput
         type="number"
         name="phone"
         id="phone-input"
-        label="Phone"
+        label={loc.phoneInput}
         icon="CirclePhone"
       />
       <CustomTextArea
         name="message"
         id="message-area"
-        label="Message"
+        label={loc.messageInput}
         icon="Send"
       />
       <button type="submit" className={styles.btn}>
-        Contact
+        {loc.submitBtn}
       </button>
     </form>
   );

@@ -1,7 +1,13 @@
 {
   "title" : "HomePage",
   "header" : "Header",
-  "homeLink":"Home",
-  "projectsLink":"Projects",
-  "contactLink":"Contact"
+  "homeLink": "Home",
+  "projectsLink": "Projects",
+  "contactLink": "Contact",
+  "contactFormTitle": "Tell us about your project",
+  "nameInput": "Name",
+  "emailInput": "Email",
+  "phoneInput": "Phone",
+  "messageInput": "Message",
+  "submitBtn": "Contact"
 }
