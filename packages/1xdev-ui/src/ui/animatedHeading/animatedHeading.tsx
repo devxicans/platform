@@ -19,12 +19,12 @@ type PhraseDataProps = {
 
 export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: PhraseDataProps) {
   const { getPhrase, next, splitPhrase } = renderDynamicPhrase({phrase, keyWords, keyDescriptions});
-  const [phrases, setPhrase] = useState(getPhrase());
+  const [phrases, setPhrases] = useState(getPhrase());
   const phraseParts = splitPhrase(phrases);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPhrase(next());
+      setPhrases(next());
     }, 3000);
     return () => clearInterval(interval);
   }, [next]);

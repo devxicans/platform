@@ -12,38 +12,41 @@ jest.mock('framer-motion', () => ({
 jest.useFakeTimers();
 
 describe('AnimatedHeading Component', () => {
-  const animatedHeadingProps = {
-    phrase: "We {keyWords} the future while being {keyDescriptions}",
-    keyWords: ["{engineer}", '{create}', '{code}'],
-    keyDescriptions: ['{humans}', '{developers}', '{artists}']
-  }
+  const phrase = "We {keyWords} the future while being {keyDescriptions}";
+  const keyWords = ["{engineer}", "{create}", "{code}"];
+  const keyDescriptions = ["{humans}", "{developers}", "{artists}"];
 
   it('renders the initial phrase correctly', () => {
-    render(<AnimatedHeading phrase={animatedHeadingProps.phrase} keyWords={animatedHeadingProps.keyDescriptions} keyDescriptions={animatedHeadingProps.keyDescriptions} />);
-    const animatedAnimatedHeading = screen.getByTestId('hero message');
-    expect(animatedAnimatedHeading).toBeInTheDocument();
-    expect(screen.getByTestId('hero message')).toHaveTextContent('We engineer the future while being humans');
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
+
+    const element = screen.getByTestId('hero message');
+
+    expect(element).toHaveTextContent('We engineer the future while being humans');
   });
 
   it('updates the dynamic words every 3 seconds', () => {
-    render(<AnimatedHeading phrase={animatedHeadingProps.phrase} keyWords={animatedHeadingProps.keyDescriptions} keyDescriptions={animatedHeadingProps.keyDescriptions} />);
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
 
-    expect(screen.getByTestId('hero message')).toHaveTextContent('We engineer the future while being humans');
+    const element = screen.getByTestId('hero message');
+
+    expect(element).toHaveTextContent('We engineer the future while being humans');
 
     act(() => {
       jest.advanceTimersByTime(3000);
     });
 
-    expect(screen.getByTestId('hero message')).toHaveTextContent('We create the future while being developers');
+    expect(element).toHaveTextContent('We create the future while being developers');
   });
 
   it('cycles back to the first phrase after all dynamic words have been shown', () => {
-    render(<AnimatedHeading phrase={animatedHeadingProps.phrase} keyWords={animatedHeadingProps.keyDescriptions} keyDescriptions={animatedHeadingProps.keyDescriptions} />);
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
+
+    const element = screen.getByTestId('hero message');
 
     act(() => {
       jest.advanceTimersByTime(9000);
     });
 
-    expect(screen.getByTestId('hero message')).toHaveTextContent('We engineer the future while being humans');
+    expect(element).toHaveTextContent('We engineer the future while being humans');
   });
 });
