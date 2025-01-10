@@ -11,12 +11,6 @@ type PhraseDataProps = {
   keyDescriptions: string[];
 }
 
-// const phraseData = {
-//   phrase: "We {keyWords} the future while being {keyDescriptions}",
-//   keyWords: ["{engineer}", '{create}', '{code}'],
-//   keyDescriptions: ['{humans}', '{developers}', '{artists}']
-// }
-
 export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: PhraseDataProps) {
   const { getPhrase, next, splitPhrase } = renderDynamicPhrase({phrase, keyWords, keyDescriptions});
   const [phrases, setPhrases] = useState(getPhrase());
