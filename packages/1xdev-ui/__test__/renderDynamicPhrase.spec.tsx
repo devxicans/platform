@@ -1,4 +1,4 @@
-import { renderDynamicPhrase } from "../../../../src/pages/home/components/renderDynamicPhrase";
+import { renderDynamicPhrase } from "../src";
 
 describe('renderDynamicPhrase', () => {
   const phrase = "We {keyWords} the future while being {keyDescriptions}";

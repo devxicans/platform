@@ -1,20 +1,26 @@
 'use client'
-import styles from "../homePage.module.scss";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { renderDynamicPhrase } from './renderDynamicPhrase';
 import { UiText } from '@uireact/text'
+import styles from "./animatedHeading.module.scss";
+import { renderDynamicPhrase } from "../../utils";
 
-const phraseData = {
-  phrase: "We {keyWords} the future while being {keyDescriptions}",
-  keyWords: ["{engineer}", '{create}', '{code}'],
-  keyDescriptions: ['{humans}', '{developers}', '{artists}']
+type PhraseDataProps = {
+  phrase: string;
+  keyWords: string[];
+  keyDescriptions: string[];
 }
 
-export function HeroMessage() {
-  const { getPhrase, next, splitPhrase } = renderDynamicPhrase(phraseData);
-  const [phrase, setPhrase] = useState(getPhrase());
-  const phraseParts = splitPhrase(phrase);
+// const phraseData = {
+//   phrase: "We {keyWords} the future while being {keyDescriptions}",
+//   keyWords: ["{engineer}", '{create}', '{code}'],
+//   keyDescriptions: ['{humans}', '{developers}', '{artists}']
+// }
+
+export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: PhraseDataProps) {
+  const { getPhrase, next, splitPhrase } = renderDynamicPhrase({phrase, keyWords, keyDescriptions});
+  const [phrases, setPhrase] = useState(getPhrase());
+  const phraseParts = splitPhrase(phrases);
 
   useEffect(() => {
     const interval = setInterval(() => {
