@@ -40,12 +40,12 @@ export function HeroMessage() {
               className={styles.dynamic}
             >
                 <UiText size='xlarge' category='tertiary'>
-                  {content.slice(1, -1)}
+                {content.slice(1, -1)}{' '}
                 </UiText>
             </motion.span>
           </AnimatePresence>
           ) : (
-            <UiText size='xlarge' key={key}>{content}</UiText>
+              <UiText size='xlarge' key={key}>{content}{' '} </UiText>
           )
         )}
       </div>
