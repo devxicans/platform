@@ -17,7 +17,7 @@ describe('AnimatedHeading Component', () => {
   const keyDescriptions = ["{humans}", "{developers}", "{artists}"];
 
   it('renders the initial phrase correctly', () => {
-    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} animationTime={3000} />);
 
     const element = screen.getByTestId('hero message');
 
@@ -25,7 +25,7 @@ describe('AnimatedHeading Component', () => {
   });
 
   it('updates the dynamic words every 3 seconds', () => {
-    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} animationTime={3000} />);
 
     const element = screen.getByTestId('hero message');
 
@@ -39,7 +39,7 @@ describe('AnimatedHeading Component', () => {
   });
 
   it('cycles back to the first phrase after all dynamic words have been shown', () => {
-    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} />);
+    render(<AnimatedHeading phrase={phrase} keyWords={keyWords} keyDescriptions={keyDescriptions} animationTime={3000} />);
 
     const element = screen.getByTestId('hero message');
 

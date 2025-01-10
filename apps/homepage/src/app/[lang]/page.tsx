@@ -9,6 +9,6 @@ const animatedPhraseData = {
 
 export default function AppPage() {
   return (
-    <AnimatedHeading phrase={animatedPhraseData.phrase } keyWords={animatedPhraseData.keyWords} keyDescriptions={animatedPhraseData.keyDescriptions} />
+    <AnimatedHeading phrase={animatedPhraseData.phrase } keyWords={animatedPhraseData.keyWords} keyDescriptions={animatedPhraseData.keyDescriptions} animationTime={1000} />
   )
 }
