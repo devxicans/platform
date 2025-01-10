@@ -9,9 +9,10 @@ type Props = {
   phrase: string;
   keyWords: string[];
   keyDescriptions: string[];
+  animationTime: number
 }
 
-export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: Props) {
+export function AnimatedHeading({ phrase, keyWords, keyDescriptions, animationTime }: Props) {
   const { getPhrase, next, splitPhrase } = renderDynamicPhrase({phrase, keyWords, keyDescriptions});
   const [phrases, setPhrases] = useState(getPhrase());
   const phraseParts = splitPhrase(phrases);
@@ -19,7 +20,7 @@ export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: Props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setPhrases(next());
-    }, 3000);
+    }, animationTime);
     return () => clearInterval(interval);
   }, [next]);
 
