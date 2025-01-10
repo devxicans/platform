@@ -5,13 +5,13 @@ import { UiText } from '@uireact/text'
 import styles from "./animatedHeading.module.scss";
 import { renderDynamicPhrase } from "../../utils";
 
-type PhraseDataProps = {
+type Props = {
   phrase: string;
   keyWords: string[];
   keyDescriptions: string[];
 }
 
-export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: PhraseDataProps) {
+export function AnimatedHeading({ phrase, keyWords, keyDescriptions }: Props) {
   const { getPhrase, next, splitPhrase } = renderDynamicPhrase({phrase, keyWords, keyDescriptions});
   const [phrases, setPhrases] = useState(getPhrase());
   const phraseParts = splitPhrase(phrases);
