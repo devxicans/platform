@@ -1,6 +1,6 @@
 'use client'
-import { CustomInput } from "../components";
-import { CustomTextArea } from "../components";
+import { CustomInput } from "@1xdev/ui";
+import { CustomTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from '../../../lib/context/loc-context';
 
