@@ -3,9 +3,11 @@ import { CustomInput } from "@1xdev/ui";
 import { CustomTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from '../../../lib/context/loc-context';
+import { UiValidator } from '@uireact/validator';
 
 export function ContactForm() {
   const loc = useLocalization();
+  const validator = new UiValidator();
   
   return (
     <form className={styles.form}>
