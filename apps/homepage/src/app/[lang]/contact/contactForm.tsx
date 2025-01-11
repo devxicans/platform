@@ -9,9 +9,9 @@ import { useState } from "react";
 const validator = new UiValidator();
 
 const schema = {
-  name: validator.field("text").present("Name is required"),
+  name: validator.field("text").present("{loc.nameInputError}"),
   email: validator.field("email").present("Mail is required"),
-  phone: validator.field("numeric").present("Phone is required"),
+  phone: validator.field("numeric").present("Phone is required").length(10,12),
   message: validator
     .field("text")
     .present("Message is required")

@@ -9,5 +9,10 @@
   "emailInput": "Email",
   "phoneInput": "Phone",
   "messageInput": "Message",
-  "submitBtn": "Contact"
+  "submitBtn": "Contact",
+  "nameInputError": "Name is required",
+  "emailInputError1": "Mail is required",
+  "emailInputError2": "This is not a valid email",
+  "phoneInputError": "Phone is required",
+  "messageInputError": "Message is required"
 }

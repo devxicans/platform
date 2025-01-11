@@ -9,5 +9,10 @@
   "emailInput": "Correo",
   "phoneInput": "Teléfono",
   "messageInput": "Mensaje",
-  "submitBtn": "Contactar"
+  "submitBtn": "Contactar",
+  "nameInputError": "El nombre es obligatorio",
+  "emailInputError1": "El correo es obligatorio",
+  "emailInputError2": "Este no es un correo válido",
+  "phoneInputError": "El teléfono es obligatorio",
+  "messageInputError": "El mensaje es obligatorio"
 }
