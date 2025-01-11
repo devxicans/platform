@@ -8,18 +8,18 @@ import { useState } from "react";
 
 const validator = new UiValidator();
 
-const schema = {
-  name: validator.field("text").present("{loc.nameInputError}"),
-  email: validator.field("email").present("Mail is required"),
-  phone: validator.field("numeric").present("Phone is required").length(10,12),
-  message: validator
-    .field("text")
-    .present("Message is required")
-    .length(0, 500),
-};
-
 export function ContactForm() {
   const loc = useLocalization();
+
+  const schema = {
+    name: validator.field("text").present(loc.nameInputError),
+    email: validator.field("email").present(loc.emailInputError1),
+    phone: validator.field("numeric").present(loc.phoneInputError).length(10,12),
+    message: validator
+      .field("text")
+      .present(loc.messageInputError)
+      .length(0, 500),
+  };
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
