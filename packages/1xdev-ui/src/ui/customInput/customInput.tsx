@@ -9,6 +9,7 @@ type inputProps = {
   icon: UiIconProps["icon"];
   value?: string;
   name?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const CustomInput = ({
@@ -18,6 +19,7 @@ export const CustomInput = ({
   icon,
   value,
   name,
+  onChange,
 }: inputProps) => {
   return (
     <div>
@@ -36,6 +38,7 @@ export const CustomInput = ({
             name={name}
             className={styles.input}
             placeholder=""
+            onChange={onChange}
           />
           <label htmlFor={id} className={styles.label}>
             {label}

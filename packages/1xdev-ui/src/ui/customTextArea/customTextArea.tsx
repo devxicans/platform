@@ -8,6 +8,7 @@ type inputProps = {
   icon: UiIconProps["icon"];
   value?: string;
   name?: string;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
 export const CustomTextArea = ({
@@ -16,6 +17,7 @@ export const CustomTextArea = ({
   icon,
   value,
   name,
+  onChange,
 }: inputProps) => {
   return (
     <div>
@@ -33,6 +35,7 @@ export const CustomTextArea = ({
             name={name}
             className={styles.textArea}
             placeholder=""
+            onChange={onChange}
           />
           <label htmlFor={id} className={styles.label}>
             {label}
