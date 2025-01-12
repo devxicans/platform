@@ -3,16 +3,13 @@ import { CustomInput } from "@1xdev/ui";
 import { CustomTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from "../../../lib/context/loc-context";
-import { UiValidatorErrors } from "@uireact/validator";
-import { useState } from "react";
+import { useState, useActionState } from "react";
 import { submitForm } from "./submitForm";
 
 export function ContactForm() {
   const loc = useLocalization();
-  
-  const initialState = {
-    error: ''
-  }
+
+  const [ data, action, isLoading ] = useActionState(submitForm, undefined);
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -20,8 +17,6 @@ export function ContactForm() {
     phone: "",
     message: "",
   });
-
-  const [errors, setErrors] = useState<UiValidatorErrors>();
 
   const handleChangeInputs = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,7 +28,7 @@ export function ContactForm() {
   };
 
   return (
-    <form className={styles.form} action={submitForm}>
+    <form className={styles.form} action={action}>
       <h2 className={styles.title}>{loc.contactFormTitle}</h2>
       <div className={styles.inputContainer}>
         <CustomInput
@@ -45,8 +40,8 @@ export function ContactForm() {
           value={contactInfo.name}
           onChange={handleChangeInputs}
         />
-        {errors?.name && (
-          <span className={styles.error}>{errors?.name?.[0].message} </span>
+        {data?.errors?.name && (
+          <span className={styles.error}>{data?.errors?.name?.[0].message} </span>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -59,7 +54,7 @@ export function ContactForm() {
           value={contactInfo.email}
           onChange={handleChangeInputs}
         />
-        {errors?.email?.map((error, index) => (
+        {data?.errors?.email?.map((error, index) => (
           <span key={`Error-message-${index}`} className={styles.error}>
             {error.message}{" "}
           </span>
@@ -75,8 +70,8 @@ export function ContactForm() {
           value={contactInfo.phone}
           onChange={handleChangeInputs}
         />
-        {errors?.phone && (
-          <span className={styles.error}>{errors?.phone?.[0].message} </span>
+        {data?.errors?.phone && (
+          <span className={styles.error}>{data?.errors?.phone?.[0].message} </span>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -88,11 +83,11 @@ export function ContactForm() {
           value={contactInfo.message}
           onChange={handleChangeInputs}
         />
-        {errors?.message && (
-          <span className={styles.error}>{errors?.message?.[0].message} </span>
+        {data?.errors?.message && (
+          <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
         )}
       </div>
-      <button type="submit" className={styles.btn}>
+      <button disabled={isLoading} type="submit" className={styles.btn}>
         {loc.submitBtn}
       </button>
     </form>

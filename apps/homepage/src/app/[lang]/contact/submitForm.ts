@@ -7,7 +7,7 @@ import { getDictionary } from "../../../lib";
 
 const validator = new UiValidator();
 
-export const submitForm = async (formData : FormData) => {
+export const submitForm = async (previusState : unknown, formData : FormData) => {
 
   const requestHeaders = await headers();
   const locale = getLocaleFromHeaders(requestHeaders);
@@ -30,4 +30,6 @@ export const submitForm = async (formData : FormData) => {
     }
   }
   console.log("No errors");
+  // Send mail function here
+  return
 };

@@ -13,7 +13,7 @@
   "nameInputError": "El nombre es obligatorio",
   "emailInputError1": "El correo es obligatorio",
   "emailInputError2": "El correo no es válido",
-  "phoneInputError": "El teléfono es obligatorio",
+  "phoneInputError1": "El teléfono es obligatorio",
   "phoneInputError2": "El número de teléfono debe ser de 10 a 12 dígitos",
   "messageInputError1": "El mensaje es obligatorio",
   "messageInputError2": "El mensaje no puede ser mayor a 500 caracteres"
