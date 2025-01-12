@@ -1,13 +1,14 @@
 'use client'
-import styles from './home.module.css'
-import { useLocalization } from '../../lib/context/loc-context'
+import { AnimatedHeading } from "@1xdev/ui"
+
+const animatedPhraseData = {
+  phrase: "We {keyWords} the future while being {keyDescriptions}",
+  keyWords: ["{engineer}", '{create}', '{code}'],
+  keyDescriptions: ['{humans}', '{developers}', '{artists}']
+}
 
 export default function AppPage() {
-  const loc = useLocalization();
-
   return (
-    <div className={styles.main}>
-      <h1 data-testid="title" className={styles.hero}>{loc.title}</h1>
-    </div>
+    <AnimatedHeading phrase={animatedPhraseData.phrase } keyWords={animatedPhraseData.keyWords} keyDescriptions={animatedPhraseData.keyDescriptions} animationTime={1000} />
   )
 }

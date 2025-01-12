@@ -1,0 +1,13 @@
+.hero {
+  min-height: calc(100vh - 70px);
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  font-weight: 900;
+}

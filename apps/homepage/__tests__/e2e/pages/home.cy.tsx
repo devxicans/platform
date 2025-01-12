@@ -3,7 +3,15 @@ describe('Home page tests', () => {
 
     cy.visit('/');
 
-    cy.get('[data-testid="header"]').should('exist');
+    cy.findByTestId("header").should('be.visible');
+
+  });
+
+  it('Should check hero message exist in home page', () => {
+
+    cy.visit('/');
+
+    cy.findByTestId("hero message").should('be.visible');
 
   });
 
