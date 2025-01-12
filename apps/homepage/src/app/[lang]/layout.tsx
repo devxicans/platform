@@ -5,13 +5,13 @@ import { Header } from './_shared'
 
 interface AppLayoutProps {
   children: React.ReactNode
-  params: {
+  params: Promise<{
     lang: SupportedLanguages
-  }
+  }>
 }
 
 export default async function AppLayout({ children, params }: AppLayoutProps) {
-  const loc = await getDictionary(params.lang);
+  const loc = await getDictionary((await params).lang);
 
   return (
     <LocProvider loc={loc}>

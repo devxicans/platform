@@ -1,7 +1,20 @@
 {
   "heroText" : "We engineer the future while being humans",
   "header" : "Header",
-  "homeLink":"Home",
-  "projectsLink":"Projects",
-  "contactLink":"Contact"
+  "homeLink": "Home",
+  "projectsLink": "Projects",
+  "contactLink": "Contact",
+  "contactFormTitle": "Tell us about your project",
+  "nameInput": "Name",
+  "emailInput": "Email",
+  "phoneInput": "Phone",
+  "messageInput": "Message",
+  "submitBtn": "Contact",
+  "nameInputError": "Name is required",
+  "emailInputError1": "Mail is required",
+  "emailInputError2": "This is not a valid email",
+  "phoneInputError1": "Phone is required",
+  "phoneInputError2": "Phone lenght must be 10 to 12 numbers",
+  "messageInputError1": "Message is required",
+  "messageInputError2": "Message must not be longer than 500 characters"
 }

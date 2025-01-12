@@ -1,7 +1,20 @@
 {
-  "heroText": "Nosotros diseñamos el futuro mientras somos humanos.",
-  "header" : "Encabezado",
-  "homeLink":"Inicio",
-  "projectsLink":"Proyectos",
-  "contactLink":"Contacto"
+  "title": "Pagina Principal",
+  "header": "Encabezado",
+  "homeLink": "Inicio",
+  "projectsLink": "Proyectos",
+  "contactLink": "Contacto",
+  "contactFormTitle": "Cuéntanos sobre tu proyecto",
+  "nameInput": "Nombre",
+  "emailInput": "Correo",
+  "phoneInput": "Teléfono",
+  "messageInput": "Mensaje",
+  "submitBtn": "Contactar",
+  "nameInputError": "El nombre es obligatorio",
+  "emailInputError1": "El correo es obligatorio",
+  "emailInputError2": "El correo no es válido",
+  "phoneInputError1": "El teléfono es obligatorio",
+  "phoneInputError2": "El número de teléfono debe ser de 10 a 12 dígitos",
+  "messageInputError1": "El mensaje es obligatorio",
+  "messageInputError2": "El mensaje no puede ser mayor a 500 caracteres"
 }

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.4.2...@1xdev/ui@0.5.0) (2025-01-12)
+
+### Features
+
+- created contact form UI ([#46](https://github.com/devxicans/platform/issues/46)) ([bba3975](https://github.com/devxicans/platform/commit/bba3975f9d8f573e6297d498753a9c7fea8267d8))
+
+## [0.4.2](https://github.com/devxicans/platform/compare/@1xdev/ui@0.4.1...@1xdev/ui@0.4.2) (2025-01-12)
+
+**Note:** Version bump only for package @1xdev/ui
+
+## [0.4.1](https://github.com/devxicans/platform/compare/@1xdev/ui@0.4.0...@1xdev/ui@0.4.1) (2025-01-12)
+
+**Note:** Version bump only for package @1xdev/ui
+
 # [0.4.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.3.0...@1xdev/ui@0.4.0) (2025-01-01)
 
 ### Features
