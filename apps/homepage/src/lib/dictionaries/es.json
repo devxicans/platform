@@ -15,5 +15,6 @@
   "emailInputError2": "El correo no es válido",
   "phoneInputError": "El teléfono es obligatorio",
   "phoneInputError2": "El número de teléfono debe ser de 10 a 12 dígitos",
-  "messageInputError": "El mensaje es obligatorio"
+  "messageInputError1": "El mensaje es obligatorio",
+  "messageInputError2": "El mensaje no puede ser mayor a 500 caracteres"
 }

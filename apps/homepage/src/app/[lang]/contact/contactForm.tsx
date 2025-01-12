@@ -17,8 +17,8 @@ export function ContactForm() {
     phone: validator.field("numeric").present(loc.phoneInputError1).length(10,12,loc.phoneInputError2),
     message: validator
       .field("text")
-      .present(loc.messageInputError)
-      .length(0, 500),
+      .present(loc.messageInputError1)
+      .length(0, 500,loc.messageInputError2),
   };
 
   const [contactInfo, setContactInfo] = useState({
