@@ -18,4 +18,5 @@
   display: flex;
   position: fixed;
   bottom: 0;
+  background-color: var(--primary-token_10);
 }

@@ -1,0 +1,36 @@
+.form {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.title {
+  align-self: center;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 2%;
+  border: none;
+  background-color: var(--tertiary-token_100);
+  color: var(--primary-token_10);
+  font-weight: bold;
+  font-size: var(--texts-largeg);
+  margin-right: auto;
+}
+
+.btn:hover {
+  background-color: var(--tertiary-token_150);
+  cursor: pointer;
+}
+
+.error{
+  color: var(--error-token_50);
+  display: block;
+  padding: 5px;
+  font-size: var(--texts-small);
+}
