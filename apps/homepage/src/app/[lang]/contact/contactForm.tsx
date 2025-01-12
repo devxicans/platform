@@ -3,23 +3,16 @@ import { CustomInput } from "@1xdev/ui";
 import { CustomTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from "../../../lib/context/loc-context";
-import { UiValidator, UiValidatorErrors } from "@uireact/validator";
+import { UiValidatorErrors } from "@uireact/validator";
 import { useState } from "react";
-
-const validator = new UiValidator();
+import { submitForm } from "./submitForm";
 
 export function ContactForm() {
   const loc = useLocalization();
 
-  const schema = {
-    name: validator.field("text").present(loc.nameInputError),
-    email: validator.field("email",loc.emailInputError2).present(loc.emailInputError1),
-    phone: validator.field("numeric").present(loc.phoneInputError1).length(10,12,loc.phoneInputError2),
-    message: validator
-      .field("text")
-      .present(loc.messageInputError1)
-      .length(0, 500,loc.messageInputError2),
-  };
+  const initialState = {
+    error: ''
+  }
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -39,30 +32,8 @@ export function ContactForm() {
     });
   };
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-
-    const { name, email, phone, message } = contactInfo;
-
-    const newContact = {
-      name,
-      email,
-      phone,
-      message,
-    };
-
-    const result = validator.validate(schema, newContact);
-
-    if (!result.passed) {
-      setErrors(result.errors);
-      console.log(result.errors);
-      return;
-    }
-    console.log("No errors");
-  }
-
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} action={submitForm}>
       <h2 className={styles.title}>{loc.contactFormTitle}</h2>
       <div className={styles.inputContainer}>
         <CustomInput
