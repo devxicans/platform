@@ -9,7 +9,7 @@ import { submitForm } from "./submitForm";
 
 export function ContactForm() {
   const loc = useLocalization();
-
+  
   const initialState = {
     error: ''
   }

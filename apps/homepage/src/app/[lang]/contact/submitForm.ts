@@ -9,7 +9,7 @@ const validator = new UiValidator();
 
 export const submitForm = async (formData : FormData) => {
 
-  const requestHeaders = headers();
+  const requestHeaders = await headers();
   const locale = getLocaleFromHeaders(requestHeaders);
   const loc = await getDictionary(locale);
 
