@@ -1,5 +1,5 @@
 "use client";
-import styles from "./xTextArea.module.scss";
+import styles from "./xDevTextArea.module.scss";
 import { UiIcon, UiIconProps } from "@uireact/icons";
 
 type inputProps = {

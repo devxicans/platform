@@ -83,6 +83,7 @@ export function ContactForm() {
           value={contactInfo.message}
           onChange={handleChangeInputs}
         />
+        <span className={styles.characterCount}>500</span>
         {data?.errors?.message && (
           <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
         )}
