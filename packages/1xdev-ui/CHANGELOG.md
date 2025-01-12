@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/devxicans/platform/compare/@1xdev/ui@0.4.0...@1xdev/ui@0.4.1) (2025-01-12)
+
+**Note:** Version bump only for package @1xdev/ui
+
 # [0.4.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.3.0...@1xdev/ui@0.4.0) (2025-01-01)
 
 ### Features
