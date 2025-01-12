@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.5.0...@1xdev/ui@0.6.0) (2025-01-12)
+
+### Features
+
+- added hero message ([#41](https://github.com/devxicans/platform/issues/41)) ([fd4c4a3](https://github.com/devxicans/platform/commit/fd4c4a35790582a642ac1d6486a5178dcc64ff8b))
+
 # [0.5.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.4.2...@1xdev/ui@0.5.0) (2025-01-12)
 
 ### Features
