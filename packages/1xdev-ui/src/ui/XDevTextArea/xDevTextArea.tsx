@@ -1,20 +1,18 @@
 "use client";
-import styles from "./customInput.module.scss";
+import styles from "./xTextArea.module.scss";
 import { UiIcon, UiIconProps } from "@uireact/icons";
 
 type inputProps = {
   label: string;
-  type: string;
   id: string;
   icon: UiIconProps["icon"];
   value?: string;
   name?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
-export const CustomInput = ({
+export const XDevTextArea = ({
   label,
-  type,
   id,
   icon,
   value,
@@ -31,12 +29,11 @@ export const CustomInput = ({
             className={styles.icon}
             coloration="dark"
           />
-          <input
-            type={type}
+          <textarea
             id={id}
             value={value}
             name={name}
-            className={styles.input}
+            className={styles.textArea}
             placeholder=""
             onChange={onChange}
           />
