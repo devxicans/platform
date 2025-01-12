@@ -13,6 +13,7 @@
   "nameInputError": "Name is required",
   "emailInputError1": "Mail is required",
   "emailInputError2": "This is not a valid email",
-  "phoneInputError": "Phone is required",
+  "phoneInputError1": "Phone is required",
+  "phoneInputError2": "Phone lenght must be 10 to 12 numbers",
   "messageInputError": "Message is required"
 }
