@@ -8,6 +8,7 @@ type inputProps = {
   icon: UiIconProps["icon"];
   value?: string;
   name?: string;
+  maxLength?: number;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
@@ -17,6 +18,7 @@ export const XDevTextArea = ({
   icon,
   value,
   name,
+  maxLength,
   onChange,
 }: inputProps) => {
   return (
@@ -36,6 +38,7 @@ export const XDevTextArea = ({
             className={styles.textArea}
             placeholder=""
             onChange={onChange}
+            maxLength={maxLength}
           />
           <label htmlFor={id} className={styles.label}>
             {label}

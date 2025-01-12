@@ -16,5 +16,6 @@
   "phoneInputError1": "Phone is required",
   "phoneInputError2": "Phone lenght must be 10 to 12 numbers",
   "messageInputError1": "Message is required",
-  "messageInputError2": "Message must not be longer than 500 characters"
+  "messageInputError2": "Message must not be longer than 500 characters",
+  "maxLengthMessage": "Characters left:"
 }

@@ -11,6 +11,9 @@ export function ContactForm() {
 
   const [ data, action, isLoading ] = useActionState(submitForm, undefined);
 
+  const charLimit = 500;
+  const [charCount, setCharCount] = useState(charLimit);
+
   const [contactInfo, setContactInfo] = useState({
     name: "",
     email: "",
@@ -25,6 +28,9 @@ export function ContactForm() {
       ...contactInfo,
       [e.currentTarget.name]: e.currentTarget.value,
     });
+    if (e.currentTarget.name === "message") {
+      setCharCount(charLimit - e.currentTarget.value.length);
+    }
   };
 
   return (
@@ -82,8 +88,9 @@ export function ContactForm() {
           icon="Send"
           value={contactInfo.message}
           onChange={handleChangeInputs}
+          maxLength={charLimit}
         />
-        <span className={styles.characterCount}>500</span>
+        <span className={styles.characterCount}>{loc.maxLengthMessage} {charCount}</span>
         {data?.errors?.message && (
           <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
         )}
