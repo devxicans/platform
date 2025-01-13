@@ -23,4 +23,20 @@ describe('XDevTextArea area component tests', () => {
 
     expect(input).toHaveValue('hola');
   });
+
+  test('Should render the maxLength', async () => {
+    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={500}/>);
+    expect(screen.getByTestId('charCounter')).toBeInTheDocument();
+  });
+
+  test('Should render the updated character count', async () => {
+    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={500} characterCount={200}/>);
+    expect(screen.getByTestId('charCounter')).toBeInTheDocument();
+    expect(screen.getByTestId('charCounter')).toHaveTextContent('200');
+  });
+
+  test('Should chnage classname when character count equals 0', async () => {
+    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={500} characterCount={0}/>);
+    expect(screen.getByTestId('charCounter')).toHaveClass('characterMax');
+  });
 });
