@@ -43,7 +43,8 @@ export const XDevTextArea = ({
             maxLength={maxLength}
           />
           {maxLength && (
-            <span className={styles.characterCount}>
+            <span
+              className={characterCount === 0 ? styles.characterMax : styles.characterCount}>
               {characterCount}
             </span>
           )}

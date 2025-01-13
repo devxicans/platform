@@ -61,3 +61,11 @@
   color: black;
   font-size: var(--texts-xsmall);
 }
+
+.characterMax{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: var(--error-token_50);
+  font-size: var(--texts-xsmall);
+}
