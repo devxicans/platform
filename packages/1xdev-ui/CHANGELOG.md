@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.6.0...@1xdev/ui@0.7.0) (2025-01-13)
+
+### Features
+
+- updated components name and updated form ([#49](https://github.com/devxicans/platform/issues/49)) ([0b18a5f](https://github.com/devxicans/platform/commit/0b18a5fc39eb3fc8c55867f6ecf5beebc0fdb846))
+
 # [0.6.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.5.0...@1xdev/ui@0.6.0) (2025-01-12)
 
 ### Features
