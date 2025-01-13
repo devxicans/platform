@@ -86,10 +86,8 @@ export function ContactForm() {
           id="message-area"
           label={loc.messageInput}
           icon="Send"
-          value={contactInfo.message}
           onChange={handleChangeInputs}
           maxLength={charLimit}
-          characterCount={charCount}
         />
         {data?.errors?.message && (
           <span className={styles.error}>{data?.errors?.message?.[0].message} </span>

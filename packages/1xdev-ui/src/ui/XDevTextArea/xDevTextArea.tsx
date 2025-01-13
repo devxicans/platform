@@ -1,15 +1,14 @@
 "use client";
+import React, { useState } from "react";
 import styles from "./xDevTextArea.module.scss";
 import { UiIcon, UiIconProps } from "@uireact/icons";
 
-type inputProps = {
+type InputProps = {
   label: string;
   id: string;
   icon: UiIconProps["icon"];
-  value?: string;
   name?: string;
   maxLength?: number;
-  characterCount?: number;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
@@ -17,12 +16,24 @@ export const XDevTextArea = ({
   label,
   id,
   icon,
-  value,
   name,
-  maxLength,
-  characterCount,
+  maxLength = 500,
   onChange,
-}: inputProps) => {
+}: InputProps) => {
+  const [value, setValue] = useState("");
+  const [charCount, setCharCount] = useState(maxLength);
+  const maxLengthValue = maxLength
+  
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newValue = event.target.value;
+    setValue(newValue);
+    setCharCount(maxLengthValue - newValue.length);
+
+    if (onChange) {
+      onChange(event);
+    }
+  };
+
   return (
     <div>
       <div className={styles.inputContainer}>
@@ -35,17 +46,19 @@ export const XDevTextArea = ({
           />
           <textarea
             id={id}
-            value={value}
             name={name}
             className={styles.textArea}
             placeholder=""
-            onChange={onChange}
+            value={value}
+            onChange={handleChange}
             maxLength={maxLength}
           />
           {maxLength && (
-            <span data-testid="charCounter"
-              className={characterCount === 0 ? styles.characterMax : styles.characterCount}>
-              {characterCount}
+            <span
+              data-testid="charCounter"
+              className={charCount === 0 ? styles.characterMax : styles.characterCount}
+            >
+              {charCount}
             </span>
           )}
           <label htmlFor={id} className={styles.label}>
