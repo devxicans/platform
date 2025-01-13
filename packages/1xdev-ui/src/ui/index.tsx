@@ -1,5 +1,5 @@
 export * from './button'
 export * from './iconLink'
-export * from './customInput'
-export * from './customTextArea'
+export * from './XDevInput'
+export * from './XDevTextArea'
 export * from './animatedHeading'

@@ -25,7 +25,7 @@
 
 .textArea{
   padding: 0px 10px 10px 10px;
-  margin: 15px 0px 10px 0px;
+  margin: 15px 0px 30px 0px;
   width: 100%;
   height: 100px;
   border: none;
@@ -52,4 +52,20 @@
 .textArea:not(:placeholder-shown) ~ .label {
   top: 3px;
   font-size: 14px;
+}
+
+.characterCount{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: black;
+  font-size: var(--texts-xsmall);
+}
+
+.characterMax{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: var(--error-token_50);
+  font-size: var(--texts-xsmall);
 }

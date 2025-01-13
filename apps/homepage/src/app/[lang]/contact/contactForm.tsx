@@ -1,6 +1,6 @@
 "use client";
-import { CustomInput } from "@1xdev/ui";
-import { CustomTextArea } from "@1xdev/ui";
+import { XDevInput } from "@1xdev/ui";
+import { XDevTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from "../../../lib/context/loc-context";
 import { useState, useActionState } from "react";
@@ -10,6 +10,9 @@ export function ContactForm() {
   const loc = useLocalization();
 
   const [ data, action, isLoading ] = useActionState(submitForm, undefined);
+
+  const charLimit = 500;
+  const [charCount, setCharCount] = useState(charLimit);
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -25,13 +28,16 @@ export function ContactForm() {
       ...contactInfo,
       [e.currentTarget.name]: e.currentTarget.value,
     });
+    if (e.currentTarget.name === "message") {
+      setCharCount(charLimit - e.currentTarget.value.length);
+    }
   };
 
   return (
     <form className={styles.form} action={action}>
       <h2 className={styles.title}>{loc.contactFormTitle}</h2>
       <div className={styles.inputContainer}>
-        <CustomInput
+        <XDevInput
           type="text"
           name="name"
           id="name-input"
@@ -45,7 +51,7 @@ export function ContactForm() {
         )}
       </div>
       <div className={styles.inputContainer}>
-        <CustomInput
+        <XDevInput
           type="text"
           name="email"
           id="email-input"
@@ -61,7 +67,7 @@ export function ContactForm() {
         ))}
       </div>
       <div className={styles.inputContainer}>
-        <CustomInput
+        <XDevInput
           type="number"
           name="phone"
           id="phone-input"
@@ -75,13 +81,13 @@ export function ContactForm() {
         )}
       </div>
       <div className={styles.inputContainer}>
-        <CustomTextArea
+        <XDevTextArea
           name="message"
           id="message-area"
           label={loc.messageInput}
           icon="Send"
-          value={contactInfo.message}
           onChange={handleChangeInputs}
+          maxLength={charLimit}
         />
         {data?.errors?.message && (
           <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
