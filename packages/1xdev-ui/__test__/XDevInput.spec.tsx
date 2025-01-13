@@ -1,10 +1,10 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { CustomInput } from '../src';
+import { XDevInput } from '../src';
 
-describe('Custom input component tests', () => {
+describe('XDevInput component tests', () => {
   test('Should render the CustomInput with label and icon', () => {
-    render(<CustomInput type="text" label="Mail" name="mail" id="mail-input" icon="Mail" />);
+    render(<XDevInput type="text" label="Mail" name="mail" id="mail-input" icon="Mail" />);
 
     const input = screen.getByRole('textbox', { name: /mail/i });
     const label = screen.getByText(/mail/i);
@@ -16,7 +16,7 @@ describe('Custom input component tests', () => {
   });
 
   test('Should update the input value on change', async () => {
-    render(<CustomInput type="text" label="Mail" name="mail" id="mail-input" icon="Mail" />);
+    render(<XDevInput type="text" label="Mail" name="mail" id="mail-input" icon="Mail" />);
 
     const input = screen.getByRole('textbox', { name: /mail/i });
     fireEvent.change(input, { target: { value: 'test@mail.com' } });
