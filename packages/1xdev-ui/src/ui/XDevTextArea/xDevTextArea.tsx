@@ -9,6 +9,7 @@ type inputProps = {
   value?: string;
   name?: string;
   maxLength?: number;
+  characterCount?: number;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
@@ -19,6 +20,7 @@ export const XDevTextArea = ({
   value,
   name,
   maxLength,
+  characterCount,
   onChange,
 }: inputProps) => {
   return (
@@ -40,6 +42,11 @@ export const XDevTextArea = ({
             onChange={onChange}
             maxLength={maxLength}
           />
+          {maxLength && (
+            <span className={styles.characterCount}>
+              {characterCount}
+            </span>
+          )}
           <label htmlFor={id} className={styles.label}>
             {label}
           </label>

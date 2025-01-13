@@ -89,8 +89,8 @@ export function ContactForm() {
           value={contactInfo.message}
           onChange={handleChangeInputs}
           maxLength={charLimit}
+          characterCount={charCount}
         />
-        <span className={styles.characterCount}>{loc.maxLengthMessage} {charCount}</span>
         {data?.errors?.message && (
           <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
         )}
