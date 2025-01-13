@@ -29,14 +29,21 @@ describe('XDevTextArea area component tests', () => {
     expect(screen.getByTestId('charCounter')).toBeInTheDocument();
   });
 
-  test('Should render the updated character count', async () => {
-    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={500} characterCount={200}/>);
-    expect(screen.getByTestId('charCounter')).toBeInTheDocument();
-    expect(screen.getByTestId('charCounter')).toHaveTextContent('200');
+  test('Should call onChange when value changes', () => {
+    const mockOnChange = jest.fn();
+    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" onChange={mockOnChange}/>);
+    const input = screen.getByRole('textbox', { name: /message/i });
+    fireEvent.change(input, { target: { value: 'New message' } });
+    expect(mockOnChange).toHaveBeenCalledTimes(1);
   });
 
-  test('Should chnage classname when character count equals 0', async () => {
-    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={500} characterCount={0}/>);
+  test('Should change classname when character count equals 0', async () => {
+    render(<XDevTextArea label="Message" name="message" id="message-input" icon="Send" maxLength={2}/>);
+    const input = screen.getByRole('textbox', { name: /message/i });
+
+    expect(screen.getByTestId('charCounter')).toHaveClass('characterCount');
+
+    fireEvent.change(input, { target: { value: 'Si' } });
     expect(screen.getByTestId('charCounter')).toHaveClass('characterMax');
   });
 });
