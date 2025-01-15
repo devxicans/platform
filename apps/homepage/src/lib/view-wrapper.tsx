@@ -1,8 +1,14 @@
-'use client'
-import { UiView } from '@uireact/view';
+"use client";
+import { UiView } from "@uireact/view";
 
-export const ViewWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const styles = {
+  paddingBottom: "70px"
+}
+
+export const ViewWrapper: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => (
   <UiView>
-    {children}
+    <div style={styles}>{children}</div>
   </UiView>
 );
