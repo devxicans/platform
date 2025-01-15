@@ -69,3 +69,7 @@
   color: var(--error-token_50);
   font-size: var(--texts-xsmall);
 }
+
+::placeholder{
+  color: transparent;
+}

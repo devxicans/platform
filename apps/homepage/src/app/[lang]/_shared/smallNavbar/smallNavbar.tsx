@@ -10,8 +10,8 @@ export function SmallNavbar() {
   const pathname = usePathname();
 
   const formattedPath = useMemo(() => {
-      const cleanedPath = pathname.replace(/^\/(es|en)/, "");
-      return cleanedPath === "" ? "/" : cleanedPath;
+    const cleanedPath = pathname.replace(/^\/(es|en)/, "");
+    return cleanedPath === "" ? "/" : cleanedPath;
   }, [pathname]);
 
   return (
@@ -22,9 +22,10 @@ export function SmallNavbar() {
         </h1>
       </div>
       <div className={styles.mobileMenu}>
-        {buttons.map((button) => {
+        {buttons.map((button, key) => {
           return (
             <MobileButton
+              key={key}
               icon={button.icon as UiIconProps["icon"]}
               href={button.href}
               active={formattedPath === button.href}
