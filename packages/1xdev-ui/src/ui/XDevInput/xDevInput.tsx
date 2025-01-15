@@ -37,7 +37,7 @@ export const XDevInput = ({
             value={value}
             name={name}
             className={styles.input}
-            placeholder=""
+            placeholder="."
             onChange={onChange}
           />
           <label htmlFor={id} className={styles.label}>
