@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/devxicans/platform/compare/@1xdev/ui@0.7.0...@1xdev/ui@0.7.1) (2025-01-15)
+
+### Bug Fixes
+
+- fixed mobile menu ([#50](https://github.com/devxicans/platform/issues/50)) ([26fc9e7](https://github.com/devxicans/platform/commit/26fc9e787433053e03897bda2a19f8539bbe17e2))
+
 # [0.7.0](https://github.com/devxicans/platform/compare/@1xdev/ui@0.6.0...@1xdev/ui@0.7.0) (2025-01-13)
 
 ### Features
