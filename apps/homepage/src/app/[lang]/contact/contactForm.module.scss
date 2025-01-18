@@ -21,6 +21,8 @@
   font-weight: bold;
   font-size: var(--texts-largeg);
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .btn:hover {
@@ -33,4 +35,23 @@
   display: block;
   padding: 5px;
   font-size: var(--texts-small);
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: var(--texts-small);
+  text-align: center;
+}
+
+.succesSubmit {
+  background-color: white;
+  color: black;
+  border: 1px solid var(--positive-token_150);
+}
+
+.errorSubmit {
+  background-color: white;
+  color: var(--error-token_200);
+  border: 1px solid var(--error-token_150);
 }
