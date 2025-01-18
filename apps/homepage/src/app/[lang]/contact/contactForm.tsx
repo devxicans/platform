@@ -12,7 +12,6 @@ export function ContactForm() {
   const [ data, action, isLoading ] = useActionState(submitForm, undefined);
 
   const charLimit = 500;
-  const [charCount, setCharCount] = useState(charLimit);
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -28,9 +27,6 @@ export function ContactForm() {
       ...contactInfo,
       [e.currentTarget.name]: e.currentTarget.value,
     });
-    if (e.currentTarget.name === "message") {
-      setCharCount(charLimit - e.currentTarget.value.length);
-    }
   };
 
   return (
