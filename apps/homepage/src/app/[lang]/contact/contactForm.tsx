@@ -6,6 +6,7 @@ import { useLocalization } from "../../../lib/context/loc-context";
 import { useState, useActionState, useEffect } from "react";
 import { submitForm } from "./submitForm";
 import { UiIcon } from "@uireact/icons";
+import { UiText } from "@uireact/text";
 
 export function ContactForm() {
   const loc = useLocalization();
@@ -75,9 +76,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.name && (
-          <span className={styles.error}>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
             {data?.errors?.name?.[0].message}{" "}
-          </span>
+          </UiText>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -91,9 +92,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.email?.map((error, index) => (
-          <span key={`Error-message-${index}`} className={styles.error}>
+          <UiText inline key={`Error-message-${index}`} className={styles.error} category="error" padding={{all: 'one'}}>
             {error.message}{" "}
-          </span>
+          </UiText>
         ))}
       </div>
       <div className={styles.inputContainer}>
@@ -107,9 +108,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.phone && (
-          <span className={styles.error}>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
             {data?.errors?.phone?.[0].message}{" "}
-          </span>
+          </UiText>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -123,9 +124,9 @@ export function ContactForm() {
           maxLength={charLimit}
         />
         {data?.errors?.message && (
-          <span className={styles.error}>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
             {data?.errors?.message?.[0].message}{" "}
-          </span>
+          </UiText>
         )}
       </div>
       <button disabled={isLoading} type="submit" className={styles.btn}>
