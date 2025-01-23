@@ -18,5 +18,10 @@
   "messageInputError1": "El mensaje es obligatorio",
   "messageInputError2": "El mensaje no puede ser mayor a 500 caracteres",
   "successMessageSendMail": "Tu mensaje ha sido enviado exitosamente.",
-  "errorMessageSendMail": "Hubo un error enviando tu mensaje. Intenta de nuevo más tarde"
+  "errorMessageSendMail": "Hubo un error enviando tu mensaje. Intenta de nuevo más tarde",
+  "hello":"Hola",
+  "pageLinkText":"Visita nuestro sitio web",
+  "emailMessage":"Hemos recibido tu mensaje y te contactaremos pronto.",
+  "contactUs":"Contáctanos",
+  "someLinksText":"Enlaces que podrian servirte:"
 }

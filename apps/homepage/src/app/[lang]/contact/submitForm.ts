@@ -5,6 +5,8 @@ import { headers } from 'next/headers'
 import { getLocaleFromHeaders } from "../../../lib";
 import { getDictionary } from "../../../lib";
 import { Resend } from "resend";
+import { MailTemplate } from "./emailTemplate/mailTemplate";
+import { v4 as uuidv4 } from 'uuid';
 
 const validator = new UiValidator();
 
@@ -64,11 +66,20 @@ const sendMail = async (contact: Contact) => {
 
   const resend = new Resend(RESEND_API_KEY);
 
+  const requestHeaders = await headers();
+  const locale = getLocaleFromHeaders(requestHeaders);
+  const loc = await getDictionary(locale);
+
+  const uniqueEntityId = uuidv4();
+
   const result = await resend.emails.send({
     from: RESEND_API_MAIL,
     to: contact.email,
     subject: "We got your information",
-    html: `<strong>Hello ${contact.name}, we have received your message!</strong>`,
+    react: MailTemplate({loc, contact}),
+    headers: {
+      'X-Entity-Ref-ID': uniqueEntityId
+    }
   });
 
   if (!result?.data?.id) {

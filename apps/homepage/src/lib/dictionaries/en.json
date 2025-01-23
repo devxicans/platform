@@ -18,5 +18,10 @@
   "messageInputError1": "Message is required",
   "messageInputError2": "Message must not be longer than 500 characters",
   "successMessageSendMail":"Your message has been sent successfully",
-  "errorMessageSendMail":"There was an error sending your message. Please try again later."
+  "errorMessageSendMail":"There was an error sending your message. Please try again later.",
+  "hello":"Hello",
+  "pageLinkText":"Visit our website",
+  "emailMessage":"We have received your message and we will contact you later.",
+  "contactUs":"Contact us",
+  "someLinksText":"Some useful links:"
 }

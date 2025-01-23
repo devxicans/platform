@@ -117,6 +117,9 @@ importers:
       resend:
         specifier: ^4.1.1
         version: 4.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      uuid:
+        specifier: 11.0.5
+        version: 11.0.5
     devDependencies:
       '@1xdev/eslint-config':
         specifier: workspace:*
@@ -6198,6 +6201,10 @@ packages:
 
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==, tarball: https://registry.npmjs.org/uuid/-/uuid-10.0.0.tgz}
+    hasBin: true
+
+  uuid@11.0.5:
+    resolution: {integrity: sha512-508e6IcKLrhxKdBbcA2b4KQZlLVp2+J5UwQ6F7Drckkc5N9ZJwFa4TgWtsww9UG8fGHbm6gbV19TdM5pQ4GaIA==, tarball: https://registry.npmjs.org/uuid/-/uuid-11.0.5.tgz}
     hasBin: true
 
   uuid@8.3.2:
@@ -13428,6 +13435,8 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   uuid@10.0.0: {}
+
+  uuid@11.0.5: {}
 
   uuid@8.3.2: {}
 
