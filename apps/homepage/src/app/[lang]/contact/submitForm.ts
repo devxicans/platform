@@ -33,7 +33,6 @@ export const submitForm = async (previusState : unknown, formData : FormData) =>
   const result = validator.validate(schema, rawFormData);
 
   if (!result.passed) {
-    console.log(rawFormData)
     return{
       errors: result.errors
     }

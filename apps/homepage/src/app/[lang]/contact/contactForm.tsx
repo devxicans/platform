@@ -129,18 +129,8 @@ export function ContactForm() {
         )}
       </div>
       <button disabled={isLoading} type="submit" className={styles.btn}>
-        {isLoading ? (
-          <>
-            {loc.submitBtn}
-            <UiIcon
-              icon="LoadingSpinner"
-              category="primary"
-              coloration="dark"
-            />
-          </>
-        ) : (
-          loc.submitBtn
-        )}
+        {loc.submitBtn}
+        {isLoading && <UiIcon icon="LoadingSpinner" category="primary" coloration="dark" />}
       </button>
     </form>
   );
