@@ -7,6 +7,7 @@ type InputProps = {
   label: string;
   id: string;
   icon: UiIconProps["icon"];
+  value?: string;
   name?: string;
   maxLength?: number;
   onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
@@ -17,18 +18,13 @@ export const XDevTextArea = ({
   id,
   icon,
   name,
+  value='',
   maxLength = 500,
   onChange,
 }: InputProps) => {
-  const [value, setValue] = useState("");
-  const [charCount, setCharCount] = useState(maxLength);
-  const maxLengthValue = maxLength
+  const charCount = maxLength - value.length;
   
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newValue = event.target.value;
-    setValue(newValue);
-    setCharCount(maxLengthValue - newValue.length);
-
     if (onChange) {
       onChange(event);
     }

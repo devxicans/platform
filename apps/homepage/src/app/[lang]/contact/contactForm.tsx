@@ -3,16 +3,17 @@ import { XDevInput } from "@1xdev/ui";
 import { XDevTextArea } from "@1xdev/ui";
 import styles from "./contactForm.module.scss";
 import { useLocalization } from "../../../lib/context/loc-context";
-import { useState, useActionState } from "react";
+import { useState, useActionState, useEffect } from "react";
 import { submitForm } from "./submitForm";
+import { UiIcon } from "@uireact/icons";
+import { UiText } from "@uireact/text";
 
 export function ContactForm() {
   const loc = useLocalization();
 
-  const [ data, action, isLoading ] = useActionState(submitForm, undefined);
+  const [data, action, isLoading] = useActionState(submitForm, undefined);
 
   const charLimit = 500;
-  const [charCount, setCharCount] = useState(charLimit);
 
   const [contactInfo, setContactInfo] = useState({
     name: "",
@@ -28,14 +29,42 @@ export function ContactForm() {
       ...contactInfo,
       [e.currentTarget.name]: e.currentTarget.value,
     });
-    if (e.currentTarget.name === "message") {
-      setCharCount(charLimit - e.currentTarget.value.length);
-    }
   };
+
+  const clearForm = () => {
+    setContactInfo({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
+
+  useEffect(() => {
+    if (data?.success) {
+      clearForm();
+    }
+  }, [data]);
 
   return (
     <form className={styles.form} action={action}>
       <h2 className={styles.title}>{loc.contactFormTitle}</h2>
+      {data?.message && (
+        <>
+          <div
+            className={`${styles.message} ${
+              data.success ? styles.succesSubmit : styles.errorSubmit
+            }`}
+          >
+            <UiIcon
+              icon={data.success ? `CheckCircle` : `XCircle`}
+              category={data.success ? `positive` : `error`}
+              coloration="dark"
+            />
+            <p> {data.message}</p>
+          </div>
+        </>
+      )}
       <div className={styles.inputContainer}>
         <XDevInput
           type="text"
@@ -47,7 +76,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.name && (
-          <span className={styles.error}>{data?.errors?.name?.[0].message} </span>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
+            {data?.errors?.name?.[0].message}{" "}
+          </UiText>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -61,9 +92,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.email?.map((error, index) => (
-          <span key={`Error-message-${index}`} className={styles.error}>
+          <UiText inline key={`Error-message-${index}`} className={styles.error} category="error" padding={{all: 'one'}}>
             {error.message}{" "}
-          </span>
+          </UiText>
         ))}
       </div>
       <div className={styles.inputContainer}>
@@ -77,7 +108,9 @@ export function ContactForm() {
           onChange={handleChangeInputs}
         />
         {data?.errors?.phone && (
-          <span className={styles.error}>{data?.errors?.phone?.[0].message} </span>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
+            {data?.errors?.phone?.[0].message}{" "}
+          </UiText>
         )}
       </div>
       <div className={styles.inputContainer}>
@@ -86,15 +119,19 @@ export function ContactForm() {
           id="message-area"
           label={loc.messageInput}
           icon="Send"
+          value={contactInfo.message}
           onChange={handleChangeInputs}
           maxLength={charLimit}
         />
         {data?.errors?.message && (
-          <span className={styles.error}>{data?.errors?.message?.[0].message} </span>
+          <UiText inline className={styles.error} category="error" padding={{all: 'one'}}>
+            {data?.errors?.message?.[0].message}{" "}
+          </UiText>
         )}
       </div>
       <button disabled={isLoading} type="submit" className={styles.btn}>
         {loc.submitBtn}
+        {isLoading && <UiIcon icon="LoadingSpinner" category="primary" coloration="dark" />}
       </button>
     </form>
   );
