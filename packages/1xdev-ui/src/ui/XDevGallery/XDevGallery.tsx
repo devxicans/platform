@@ -5,13 +5,17 @@ import { AnimatePresence, motion } from "framer-motion"
 import { UiIcon } from '@uireact/icons'
 import Link from 'next/link'
 import { XDevCard } from '../XDevCard'
-interface Props {
-  id: number;
-  title: string;
-  description: string;
+interface Project {
+    id: number;
+    title: string;
+    description: string;
 }
 
-export const XDevGallery = (projects: Props[]) => {
+interface GalleryProps {
+  projects: Project[]
+}
+
+export const XDevGallery = ({projects}: GalleryProps ) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
