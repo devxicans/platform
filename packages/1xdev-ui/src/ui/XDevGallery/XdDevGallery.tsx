@@ -1,5 +1,5 @@
 'use client'
-import styles from './project.module.scss'
+import styles from './gallery.module.scss'
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { UiIcon } from '@uireact/icons'
