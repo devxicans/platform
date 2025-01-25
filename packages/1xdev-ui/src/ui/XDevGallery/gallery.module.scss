@@ -58,6 +58,11 @@
 
 .card {
   position: absolute;
+
+  a {
+    text-decoration: none;
+    color: var(--tertiary-token_100);
+  }
 }
 
 .card-0 {

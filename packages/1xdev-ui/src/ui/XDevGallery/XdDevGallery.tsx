@@ -44,7 +44,7 @@ export const XDevGallery = (projects: Props[]) => {
               }}
               transition={{ duration: 0.5 }}
               >
-              <XDevCard title={project.title} description={project.description} >
+              <XDevCard title={project.title} description={project.description}>
                 {project.id === currentIndex ? <Link href={`/project/${currentIndex}`}>See more</Link> : null}
               </XDevCard>
             </motion.div>
