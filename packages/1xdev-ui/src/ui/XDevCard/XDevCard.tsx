@@ -8,7 +8,7 @@ type Props = {
   description: string
 }
 
-export function Card({children, customStyles, title, description}: Props) {
+export function XDevCard({children, customStyles, title, description}: Props) {
   return (
     <div className={styles.card} style={customStyles}>
       <h2>{title}</h2>

@@ -4,31 +4,14 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { UiIcon } from '@uireact/icons'
 import Link from 'next/link'
+import { XDevCard } from '../XDevCard'
+interface Props {
+  id: number;
+  title: string;
+  description: string;
+}
 
-const projects = [
-  {
-    id: 0,
-    title: "Lifta",
-    description : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos facilis tenetur ipsum obcaecati ducimus! Molestiae in assumenda recusandae accusamus accusantium nesciunt aliquid explicabo est, inventore blanditiis, facilis ipsa tempore fugiat!"
-  },
-  {
-    id: 1,
-    title: "Platform",
-    description : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos facilis tenetur ipsum obcaecati ducimus! Molestiae in assumenda recusandae accusamus accusantium nesciunt aliquid explicabo est, inventore blanditiis, facilis ipsa tempore fugiat!"
-  },
-  {
-    id: 2,
-    title: "Yumzo",
-    description : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos facilis tenetur ipsum obcaecati ducimus! Molestiae in assumenda recusandae accusamus accusantium nesciunt aliquid explicabo est, inventore blanditiis, facilis ipsa tempore fugiat!"
-  },
-  {
-    id: 3,
-    title: "Save The Budget",
-    description : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos facilis tenetur ipsum obcaecati ducimus! Molestiae in assumenda recusandae accusamus accusantium nesciunt aliquid explicabo est, inventore blanditiis, facilis ipsa tempore fugiat!"
-  },
-]
-
-export const XDevGallery = () => {
+export const XDevGallery = (projects: Props[]) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -61,9 +44,9 @@ export const XDevGallery = () => {
               }}
               transition={{ duration: 0.5 }}
               >
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              {project.id === currentIndex ? <Link href={`/project/${currentIndex}`}>See more</Link> : null}
+              <XDevCard title={project.title} description={project.description} >
+                {project.id === currentIndex ? <Link href={`/project/${currentIndex}`}>See more</Link> : null}
+              </XDevCard>
             </motion.div>
           ))}
         </AnimatePresence>
