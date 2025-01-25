@@ -27,7 +27,6 @@ export function AnimatedHeading({ phrase, keyWords, keyDescriptions, animationTi
 
   return (
     <div data-testid='hero message'>
-    <div className={styles.hero}>
       <div className={styles.wrapper}>
         {phraseParts.map(({ content, isDynamic, key }) =>
           isDynamic ? (
@@ -50,7 +49,6 @@ export function AnimatedHeading({ phrase, keyWords, keyDescriptions, animationTi
           )
         )}
       </div>
-    </div>
   </div>
   )
 }

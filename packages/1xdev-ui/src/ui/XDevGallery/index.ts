@@ -1,1 +1,1 @@
-export * from './XdDevGallery'
+export * from './XDevGallery'
