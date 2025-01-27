@@ -1,6 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react'
-import { XDevGallery } from '../src'
-import '@testing-library/jest-dom'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { XDevGallery } from '../src';
+import '@testing-library/jest-dom';
 
 interface Project {
   id: number,
@@ -17,35 +17,41 @@ const mockProjects: Project[] = [
 ];
 
 describe('<XDevGallery />', () => {
-  it('renders the gallery with the correct initial projects', () => {
+  it('renders the gallery with the correct initial projects', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
-    mockProjects.slice(0, 4).forEach((project) => {
-      expect(screen.getByText(project.title)).toBeInTheDocument();
-      expect(screen.getByText(project.description)).toBeInTheDocument();
+    await waitFor(() => {
+      mockProjects.slice(0, 4).forEach((project) => {
+        expect(screen.getByText(project.title)).toBeVisible();
+        expect(screen.getByText(project.description)).toBeVisible();
+      });
     });
   });
 
-  it('displays the correct navigation buttons', () => {
+  it('displays the correct navigation buttons', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
-    expect(screen.queryByText(/Before/i)).not.toBeInTheDocument();
-
-    expect(screen.getByText(/Next/i)).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText(/Before/i)).not.toBeInTheDocument();
+      expect(screen.getByText(/Next/i)).toBeVisible();
+    });
   });
 
-  it('navigates to the next set of projects when "Next" is clicked', () => {
+  it('navigates to the next set of projects when "Next" is clicked', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
     const nextButton = screen.getByText(/Next/i);
     fireEvent.click(nextButton);
 
-    expect(screen.getByText('Project 2')).toBeInTheDocument();
-    expect(screen.getByText('Project 5')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Project 2')).toBeVisible();
+      expect(screen.getByText('Project 5')).toBeVisible();
+    });
+
     expect(screen.queryByText('Project 1')).not.toBeInTheDocument();
   });
 
-  it('navigates to the previous set of projects when "Before" is clicked', () => {
+  it('navigates to the previous set of projects when "Before" is clicked', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
     const nextButton = screen.getByText(/Next/i);
@@ -54,11 +60,14 @@ describe('<XDevGallery />', () => {
     const beforeButton = screen.getByText(/Before/i);
     fireEvent.click(beforeButton);
 
-    expect(screen.getByText('Project 1')).toBeInTheDocument();
-    expect(screen.getByText('Project 4')).toBeInTheDocument();
+    // Wait for the previous projects to appear
+    await waitFor(() => {
+      expect(screen.getByText('Project 1')).toBeVisible();
+      expect(screen.getByText('Project 4')).toBeVisible();
+    });
   });
 
-  it('starts over when clicking "Start Over"', () => {
+  it('starts over when clicking "Start Over"', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
     const nextButton = screen.getByText(/Next/i);
@@ -66,12 +75,14 @@ describe('<XDevGallery />', () => {
       fireEvent.click(nextButton);
     }
 
-    expect(screen.getByText('Project 1')).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByText('Project 1')).toBeVisible());
   });
 
-  it('renders the "See more" link only for the current project', () => {
+  it('renders the "See more" link only for the current project', async () => {
     render(<XDevGallery projects={mockProjects} />);
 
-    expect(screen.getByRole('link', { name: 'See more' })).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByRole('link', { name: 'See more' })).toBeVisible();
+    });
   });
 });
