@@ -1,0 +1,21 @@
+.card {
+  height: 250px;
+  width: 200px;
+  background-color: var(--fonts-token_100);
+  border-radius: 22px;
+  padding: 20px;
+  color: var(--primary-token_100);
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: .75rem;
+  }
+}
