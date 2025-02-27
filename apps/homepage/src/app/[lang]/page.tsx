@@ -1,7 +1,8 @@
 "use client";
 import { AnimatedHeading } from "@1xdev/ui";
+import { XDevSlider } from "@1xdev/ui";
 import { ContactForm } from "./contact/contactForm";
-import styles from "./homePage.module.css"
+import styles from "./homePage.module.scss"
 
 const animatedPhraseData = {
   phrase: "We {keyWords} the future while being {keyDescriptions}",
@@ -19,6 +20,7 @@ export default function AppPage() {
         animationTime={1000}
       />
       <div className={styles.form}>
+      <XDevSlider/>
       <ContactForm />
       </div>
     </div>
