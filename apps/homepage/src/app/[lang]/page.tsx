@@ -1,7 +1,7 @@
 "use client";
 import { AnimatedHeading } from "@1xdev/ui";
 import { ContactForm } from "./contact/contactForm";
-import styles from "./homePage.module.scss"
+import styles from "./homePage.module.scss";
 import { TeamSlider } from "./components";
 
 const animatedPhraseData = {
@@ -19,9 +19,9 @@ export default function AppPage() {
         keyDescriptions={animatedPhraseData.keyDescriptions}
         animationTime={1000}
       />
+      <TeamSlider />
       <div className={styles.form}>
-      <TeamSlider/>
-      <ContactForm />
+        <ContactForm />
       </div>
     </div>
   );
