@@ -13,7 +13,7 @@ export function SliderCover({ imageURL, altText }: SliderCoverProps) {
         The <span className={styles.spanText}>1x</span> Developers
       </h2>
       <div className={styles.imageWrapper}>
-      <Image
+        <Image
           src={imageURL}
           alt={altText}
           layout="responsive"
