@@ -1,0 +1,22 @@
+.spanText {
+  color: var(--tertiary-token_100);
+}
+
+.coverSlide {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .coverImage {
+    border-radius: 25px;
+  }
+  

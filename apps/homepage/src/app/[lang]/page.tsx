@@ -20,9 +20,7 @@ export default function AppPage() {
         animationTime={1000}
       />
       <TeamSlider />
-      <div className={styles.form}>
-        <ContactForm />
-      </div>
+      <ContactForm />
     </div>
   );
 }
