@@ -6,6 +6,7 @@ import teamData from "./teamData";
 import Image from "next/image";
 import { SliderCover } from "./cover/sliderCover";
 import { UiIcon } from "@uireact/icons";
+import { Slide } from "./slide/slide";
 
 export function TeamSlider() {
   const pathname = usePathname();
@@ -42,16 +43,13 @@ export function TeamSlider() {
           </div>
         ) : (
           <div className={styles.slide}>
-            <h2>The 1xDevelopers</h2>
-            <Image
-              src={team[currentIndex].image}
+            <Slide
+              image={team[currentIndex].image}
               alt={team[currentIndex].title}
-              width={100}
-              height={100}
+              title={team[currentIndex].title}
+              description={team[currentIndex].description}
+              skills={team[currentIndex].skills}
             />
-            <h2>{team[currentIndex].title}</h2>
-            <p>{team[currentIndex].description}</p>
-            <p>{team[currentIndex].skills.join(", ")}</p>
             <button onClick={nextSlide} className={styles.nextButton}>
               Next
               <UiIcon icon="ArrowClearRight" category="tertiary" />
