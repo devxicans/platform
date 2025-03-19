@@ -11,14 +11,26 @@ type SlideProps = {
 
 export function Slide({ image, title, description, skills }: SlideProps) {
   return (
-    <div>
+    <div className={styles.slide}>
       <h2>
         The <span className={styles.spanText}>1x</span> Developers
       </h2>
-      <Image src={image} alt={title} width={100} height={100} />
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{skills.join(" • ")}</p>
+      <div className={styles.container}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src={image}
+            alt={title}
+            width={300}
+            height={300}
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.content}>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.description}>{description}</p>
+          <p>{skills.join(" • ")}</p>
+        </div>
+      </div>
     </div>
   );
 }
